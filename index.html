@@ -190,7 +190,7 @@
 <li>Press <code>Enter</code> 2 times</li>
 <li>Press <code>Esc</code></li>
 <li>Move your cursor to the top of the file and press <code>I</code> again</li>
-<li>Copy and Paste the following sources</li>
+<li>Copy and Paste the following sources to your <code>sources.list</code> file</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
 </li>
@@ -201,7 +201,7 @@
 </ul>
 <h3 id="Update-your-sources"><a href="#Update-your-sources" class="headerlink" title="Update your sources"></a>Update your sources</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
 <h3 id="Upgrade-your-system-Optional"><a href="#Upgrade-your-system-Optional" class="headerlink" title="Upgrade your system(Optional)"></a>Upgrade your system(Optional)</h3><ul>
-<li>Note that if you do not wish to used the latest version of ubuntu, <strong>do NOT do this!</strong></li>
+<li>Note that if you <strong>DO NOT</strong> wish to used the latest version of Ubuntu, <strong>do NOT do this!</strong></li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
 <h3 id="Create-Templates"><a href="#Create-Templates" class="headerlink" title="Create Templates"></a>Create Templates</h3><ul>
@@ -241,14 +241,12 @@
 </li>
 </ul>
 <h3 id="LaTex-support"><a href="#LaTex-support" class="headerlink" title="LaTex support"></a>LaTex support</h3><ul>
-<li><p>You will need this if you want to get pretty printed math equations for your pretty docs</p>
+<li><p>You will need this if you want to get pretty printed math equations for your pretty documents</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install texlive-full	<span class="comment"># Note that this is kinda large, more than 4 gigs</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h3><ul>
-<li><p>mysql: Please refer to <a href="https://askwitionary.github.io/mysql/">Mysql Related</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git	<span class="comment"># This allows your to use git commands</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>mysql: Please refer to <a href="https://askwitionary.github.io/mysql/">Mysql Related</a></li>
 </ul>
 <h2 id="Install-your-favorite-softwares"><a href="#Install-your-favorite-softwares" class="headerlink" title="Install your favorite softwares"></a>Install your favorite softwares</h2><h3 id="A-Better-txt-Editor"><a href="#A-Better-txt-Editor" class="headerlink" title="A Better txt Editor"></a>A Better txt Editor</h3><ul>
 <li><p>Install <code>vim</code> for better command line experience</p>
@@ -269,7 +267,8 @@
 <li>Recommendation: <a href="https://dbeaver.io/" target="_blank" rel="noopener">DBeaver</a></li>
 </ul>
 <p><br></p>
-<h1 id="Everything-starts-from-basics"><a href="#Everything-starts-from-basics" class="headerlink" title="Everything starts from basics"></a>Everything starts from basics</h1><h2 id="Create-a-sudo-user"><a href="#Create-a-sudo-user" class="headerlink" title="Create a (sudo) user"></a>Create a (sudo) user</h2><ul>
+<h1 id="Everything-starts-from-basics"><a href="#Everything-starts-from-basics" class="headerlink" title="Everything starts from basics"></a>Everything starts from basics</h1><p>Now let’s cover some basic but very useful commands that you might need in your coding life. I will keep populating this section and hopefully one day we can use this as a dictionary to look up specific commands that has faded in our own human memory system.</p>
+<h2 id="Create-a-sudo-user"><a href="#Create-a-sudo-user" class="headerlink" title="Create a (sudo) user"></a>Create a (sudo) user</h2><ul>
 <li><p>Create a user (Needs root privileges)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser lduan</span><br></pre></td></tr></table></figure>
 </li>
@@ -305,7 +304,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsblk</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Checking file sizes</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">du -hs /* Size of all file*/</span><br><span class="line">ls -sh &lt;filename&gt; /* Size of all file*/</span><br><span class="line">ls -sh /* Size of all file*/</span><br><span class="line">ls -l filename /* Size of the file*/</span><br><span class="line">ls -l *        /* Size of All the files <span class="keyword">in</span> the current directory */</span><br><span class="line">ls -al *       /* Size of All the files including hidden files <span class="keyword">in</span> the current directory */</span><br><span class="line">ls -al dir/    /* Size of All the files including hidden files <span class="keyword">in</span> the <span class="string">'dir'</span> directory */</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">du -hs				/* Size of all file*/</span><br><span class="line">ls -sh &lt;filename&gt;	/* Size of all file*/</span><br><span class="line">ls -sh				/* Size of all file*/</span><br><span class="line">ls -l filename 		/* Size of the file*/</span><br><span class="line">ls -l *        		/* Size of All the files <span class="keyword">in</span> the current directory */</span><br><span class="line">ls -al *       		/* Size of All the files including hidden files <span class="keyword">in</span> the current directory */</span><br><span class="line">ls -al dir/    		/* Size of All the files including hidden files <span class="keyword">in</span> the <span class="string">'dir'</span> directory */</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="Change-command-path-source"><a href="#Change-command-path-source" class="headerlink" title="Change command path source"></a>Change command path source</h2><ul>
