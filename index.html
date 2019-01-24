@@ -518,6 +518,10 @@
 <li><p>再来就简单了。其他教程应该会各种告诉你要装<code>CUDA</code>和<code>CuDNN</code>什么的，这里现在已经完全不用了。你只需要在你的<code>conda</code>环境里面用<code>conda install tensorflow-gpu</code>命令就可以了。<code>Anaconda</code>会帮你安装这些依赖并放在合适的位置，非常方便</p>
 </li>
 </ul>
+<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.python.client <span class="keyword">import</span> device_lib</span><br><span class="line"></span><br><span class="line">device_lib.list_local_devices()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果没有报错并且可以看到准确无误的GPU信息，则安装已成功</li>
+</ul>
 <h2 id="如何安装TF（过时遗弃）"><a href="#如何安装TF（过时遗弃）" class="headerlink" title="如何安装TF（过时遗弃）"></a><em><del>如何安装TF（过时遗弃）</del></em></h2><ul>
 <li><em><del>首先推荐使用Linux系统。TF对windows的支持还是更新得比较慢的。Google官方支持的模型比较有限，如果想使用GitHub上别的大神做好的模型的话，最安全的方法就是使用Linux系统。而且Linux系统在使用服务器进行运算的过程有很多便利。</del></em></li>
 <li><em><del>安装过程Windows和Linux差不多。由于有时候要使用非官方的模型，而新版本的TF可能会不支持GitHub大神几年前写的代码，所以我们就经常需要安装多个TF版本。要实现这个最好就是使用Anaconda创建虚拟环境。</del></em></li>
@@ -867,6 +871,7 @@
 <li>where <a href="https://www.codecogs.com/eqnedit.php?latex=p_r&space;=&space;1-p_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_r&space;=&space;1-p_l" title="p_r = 1-p_l"></a> </li>
 <li><a href="https://www.codecogs.com/eqnedit.php?latex=U_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?U_0" title="U_0"></a> is current_uncertainty</li>
 <li><a href="https://www.codecogs.com/eqnedit.php?latex=p_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_l" title="p_l"></a> is the percentage/probability of left branch, same story for <a href="https://www.codecogs.com/eqnedit.php?latex=p_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_r" title="p_r"></a> </li>
+<li><a href="https://www.codecogs.com/eqnedit.php?latex=G_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_l" title="G_l"></a> is the Gini impurity we mentioned above for the left branch. Same story for <a href="https://www.codecogs.com/eqnedit.php?latex=G_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_r" title="G_r"></a> </li>
 </ul>
 </li>
 </ul>
