@@ -160,6 +160,278 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/git/">Git Related</a>
+    </h1>
+  
+
+        
+        <a href="/git/" class="archive-article-date">
+  	<time datetime="2019-01-14T02:19:49.195Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git 安装"></a>Git 安装</h1><h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><ul>
+<li>Linux用户可以在命令行输入<code>git</code>测试Git的安装</li>
+<li>一般Linux自带git的，如果没有安装，则运行下列命令</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git-all</span><br></pre></td></tr></table></figure>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><ul>
+<li>前往<code>https://git-scm.com/download/win</code>下载<code>64-bit Git for Windows Setup</code></li>
+<li>下载后运行安装程序</li>
+<li>点击一次<code>Next</code>后，勾选<code>Additional Icons</code>并点击<code>Next</code></li>
+<li>选择<code>Noptepad++</code>并点击<code>Next</code></li>
+<li>选择<code>Git from the command line and also from 3rd-party software</code>并点击<code>Next</code></li>
+<li>选择<code>Use the native Windows Secure Channel library</code>并点击<code>Next</code></li>
+<li>选择<code>Checkout Windows-style, commit Unix-style line endings</code>并点击<code>Next</code></li>
+<li>选择<code>Use MinTTY</code>并点击<code>Next</code></li>
+<li>勾选<code>Enable file system caching</code>和<code>Enable Git Credential Manager</code>并点击<code>Next</code></li>
+<li>点击<code>Install</code>开始安装</li>
+<li>完成安装后运行<code>Git Bash</code></li>
+<li>执行下列命令</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">"&lt;Your Email Address&gt;"</span></span><br><span class="line">git config --global user.name <span class="string">"&lt;Your Name&gt;"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>替换上面尖括号里面的内容为你自己的信息</li>
+<li>之后的Git命令就可以在Git Bash里面执行了</li>
+</ul>
+<p><br></p>
+<h1 id="Git-Related-Commands"><a href="#Git-Related-Commands" class="headerlink" title="Git Related Commands"></a>Git Related Commands</h1><p><br></p>
+<h2 id="Git-Global-Setup"><a href="#Git-Global-Setup" class="headerlink" title="Git Global Setup"></a>Git Global Setup</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"Lingxiao Duan"</span></span><br><span class="line">git config --global user.email <span class="string">"duanlingxiao1219@sina.com"</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="Checking-Status"><a href="#Checking-Status" class="headerlink" title="Checking Status"></a>Checking Status</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h2><ul>
+<li><p>All files in a directory</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>All files of one specific type</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*.jpg</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h2 id="Version-Control-Synchronizing"><a href="#Version-Control-Synchronizing" class="headerlink" title="Version Control (Synchronizing)"></a>Version Control (Synchronizing)</h2><ul>
+<li><p>Creating a new repository</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@9e5415541ac4:bigdata/processing.git</span><br><span class="line"><span class="built_in">cd</span> processing</span><br><span class="line">touch README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"add README"</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Setting up git to an existing folder</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> existing_folder</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@&lt;git_address&gt;:&lt;group_name&gt;/&lt;project_name&gt;.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"Initial commit"</span></span><br><span class="line">git status</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Setting up git to an existing repository</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> existing_repo</span><br><span class="line">git remote rename origin old-origin</span><br><span class="line">git remote add origin git@&lt;git_address&gt;:&lt;group_name&gt;/&lt;project_name&gt;.git</span><br><span class="line">git push -u origin --all</span><br><span class="line">git push -u origin --tags</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h1 id="Git常用指南"><a href="#Git常用指南" class="headerlink" title="Git常用指南"></a>Git常用指南</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<li>工作区（当前的工作目录）</li>
+<li>暂存区（Add等操作将修改保存至暂存区）</li>
+<li>本地版本库（Commit操作将缓存区的修改提交到本地版本库）</li>
+<li>远程版本库（本地版本push到远程版本库）</li>
+</ul>
+<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><h3 id="Git-常用命令使用"><a href="#Git-常用命令使用" class="headerlink" title="Git 常用命令使用"></a>Git 常用命令使用</h3><p>命令行里git的命令列表以及解释：</p>
+<p><code>git clone &lt;address&gt;</code>:复制代码库到本地</p>
+<p><code>git add</code><file><code>...：添加文件到代码库中</code><br><code>git rm</code><file><code>...：删除代码库的文件</code><br><code>git commit -m</code><message><code>：提交更改，在修改了文件以后，使用这个命令提交修改</code><br><code>git pull：从远程同步代码库到本地。</code><br><code>git push：推送代码到远程代码库。</code><br><code>git branch：查看当前分支。带*是当前分支。</code><br><code>git branch</code><branch-name><code>：新建一个分支。</code><br><code>git branch -d</code><branch-name><code>：删除一个分支。</code><br><code>git checkout</code><branch-name><code>：切换到指定分支。</code><br><code>git log：查看提交记录（即历史的 commit 记录）。</code><br><code>git status：当前修改的状态，是否修改了还没提交，或者那些文件未使用。</code><br><code>git reset</code><log><code>：恢复到历史版本。</code></log></branch-name></branch-name></branch-name></message></file></file></p>
+<p>代码库应该很好理解，就是存放代码的地方，而在 git clone 里，代码库一般指的是远程的代码库，即 github<br>给出的链接。而分支则是开发的一个阶段或者一个旁系版本，至于怎么定则取决于使用者了。例如，有一个分支叫做stable，代表里面的代码是经过测试的、稳定的；另一个分支叫dev，则是保存开发中的代码，不一定经过足够测试。</p>
+<h3 id="一般流程"><a href="#一般流程" class="headerlink" title="一般流程"></a>一般流程</h3><ol>
+<li>编辑文件，更新代码。</li>
+<li>添加代码到当前待提交的更改列表中：git add &lt;修改的文件&gt;</li>
+<li>提交当前修改作为一个记录：git commit -m ‘修改了&lt;修改的文件&gt;，原因是：……’</li>
+<li>更新代码：git push</li>
+<li>不要用git pull，用git fetch和git<br>merge代替它，参考：<a href="http://longair.net/blog/2009/04/16/git-fetch-and-merge/。" target="_blank" rel="noopener">http://longair.net/blog/2009/04/16/git-fetch-and-merge/。</a></li>
+</ol>
+<h3 id="Git-分支操作"><a href="#Git-分支操作" class="headerlink" title="Git 分支操作"></a>Git 分支操作</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>git命令</th>
+<th>IDEA操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建分支</td>
+<td>git branch feeder</td>
+<td>项目右键 -> git -> Repository -> Branches -> New</td>
+</tr>
+<tr>
+<td>查看当前分支</td>
+<td>git branch</td>
+<td>项目右键 -> git -> Repository -> Branches</td>
+</tr>
+<tr>
+<td>git切换分支</td>
+<td>git checkout feeder</td>
+<td>项目右键 -> git -> Repository -> Branches -> 选择分支</td>
+</tr>
+<tr>
+<td>创建并切换语句</td>
+<td>git checkout -b feeder</td>
+<td>项目右键 -> git -> Repository -> Branches -> New Branch</td>
+</tr>
+<tr>
+<td>合并分支</td>
+<td>git merge feeder</td>
+<td>项目右键 -> git -> Repository -> Merge changes -> 选择要合并的分支</td>
+</tr>
+<tr>
+<td>删除分支</td>
+<td>git branch -d feeder</td>
+<td>项目右键 -> git -> Repository -> Branches -> 选择分支 => delete</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" target="_blank" rel="noopener">分支的新建与合并</a></li>
+</ul>
+<p><img src="https://git-scm.com/figures/18333fig0316-tn.png" alt="分支"></p>
+<h3 id="git-提交代码"><a href="#git-提交代码" class="headerlink" title="git 提交代码"></a>git 提交代码</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>git命令</th>
+<th>IDEA操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>将工作区的修改提交到暂存区</strong></td>
+<td>git add 提交 file 与其子目录/git add . 提交当前目录及所有子文件</td>
+<td>项目右键 -> git -> add</td>
+</tr>
+<tr>
+<td><strong>将暂存区内容提交到版本库</strong></td>
+<td>git commit 提交 file 与其子目录/git commit . 提交当前目录及所有子文件</td>
+<td>项目右键 -> git -> Commit Directory</td>
+</tr>
+<tr>
+<td><strong>将本地分支推送到远程主机</strong></td>
+<td>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</td>
+<td>项目右键 -> git -> Repository -> push</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-回退操作"><a href="#git-回退操作" class="headerlink" title="git 回退操作"></a>git 回退操作</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>git命令</th>
+<th>IDEA操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>改变暂存区的修改</td>
+<td>git reset /git reset .</td>
+<td>项目右键 -> git -> Revert</td>
+</tr>
+<tr>
+<td>回退所有内容到上一个版本</td>
+<td>git reset HEAD^</td>
+<td>项目右键 -> git -> Repository -> resert Head</td>
+</tr>
+<tr>
+<td>回退a.py这个文件的版本到上一个版本</td>
+<td>git reset HEAD^ a.py</td>
+<td>文件右键 -> git -> Repository -> resert Head</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-拉取数据"><a href="#git-拉取数据" class="headerlink" title="git 拉取数据"></a>git 拉取数据</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>git命令</th>
+<th>IDEA操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>从远程拉取数据</td>
+<td>git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</td>
+<td>项目右键 -> git -> Repository -> pull</td>
+</tr>
+<tr>
+<td>复制命令</td>
+<td>git clone ssh地址</td>
+<td>项目右键 -> git -> Repository -> clone</td>
+</tr>
+<tr>
+<td>将远程主机更新取回本地</td>
+<td>git fetch &lt;远程主机&gt;</td>
+<td>项目右键 -> git -> Repository -> fetch</td>
+</tr>
+</tbody>
+</table>
+<h3 id="恢复命令-reset"><a href="#恢复命令-reset" class="headerlink" title="恢复命令 reset"></a>恢复命令 reset</h3><h4 id="reset命令有3种方式："><a href="#reset命令有3种方式：" class="headerlink" title="reset命令有3种方式："></a>reset命令有3种方式：</h4><p><code>git reset --mixed //此为默认方式，不带任何参数的git reset，即时这种方式，它回退到某个版本，只保留源码，回退commit和index信息</code><br><code>git reset --soft  //回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可</code><br><code>git reset --hard  //彻底回退到某个版本，本地的源码也会变为上一个版本的内容</code></p>
+<h4 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h4><p><code>git reset HEAD^         //回退所有内容到上一个版本</code><br><code>git reset HEAD^ a.py    //回退a.py这个文件的版本到上一个版本</code><br><code>git reset --soft HEAD~3 //向前回退到第3个版本</code><br><code>git reset --hard origin/master //将本地的状态回退到和远程的一样</code><br><code>git reset 057d          //回退到某个版本</code><br><code>git revert HEAD         //回退到上一次提交的状态，按照某一次的commit完全反向的进行一次commit</code></p>
+<h3 id="合并分支-merge"><a href="#合并分支-merge" class="headerlink" title="合并分支 merge"></a>合并分支 merge</h3><p>比如，如果要将开发中的分支（develop），合并到稳定分支（master），</p>
+<p><code>首先切换的master分支：git checkout master。</code><br><code>然后执行合并操作：git merge develop。</code><br><code>如果有冲突，会提示你，调用git status查看冲突文件。</code><br><code>解决冲突，然后调用git add或git rm将解决后的文件暂存。</code><br><code>所有冲突解决后，git commit 提交更改。</code></p>
+<h2 id="更改提交用户名-邮箱"><a href="#更改提交用户名-邮箱" class="headerlink" title="更改提交用户名/邮箱"></a>更改提交用户名/邮箱</h2><p><code>git config user.name &quot;XXX&quot;</code><br><code>git config user.email &quot;XXX&quot;</code><br><code>git config --global user.name &quot;XXX&quot;</code><br><code>git config --global user.email &quot;XXX&quot;</code></p>
+<p>参考：</p>
+<ul>
+<li><a href="https://alvinalexander.com/git/git-show-change-username-email-address" target="_blank" rel="noopener">https://alvinalexander.com/git/git-show-change-username-email-address</a></li>
+</ul>
+<h2 id="删除文件夹"><a href="#删除文件夹" class="headerlink" title="删除文件夹"></a>删除文件夹</h2><p><code>git checkout master</code><br><code>git rm -r folder-name // 本地文件也删除</code><br><code>git rm --cached file1.txt // 本地文件不删除，只删除git记录</code><br><code>git commit -m &quot;Remove duplicated directory&quot;</code><br><code>git push origin branch_name</code></p>
+<h2 id="外部资料"><a href="#外部资料" class="headerlink" title="外部资料"></a>外部资料</h2><ul>
+<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">Git 简单使用</a></li>
+<li><a href="https://progit.bootcss.com/" target="_blank" rel="noopener">Git Pro2</a></li>
+<li><a href="https://github.com/NeuOL/neuola-legacy/wiki/github%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">Github使用指南</a></li>
+<li><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="noopener">git - 简明指南</a></li>
+<li><a href="http://blog.jobbole.com/87410/" target="_blank" rel="noopener">Git版本控制与工作流</a></li>
+<li><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">ProGit</a></li>
+<li><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html" target="_blank" rel="noopener">git-flow备忘清单</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/git/">Show All >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Getting-to-know-UCI-database-and-other-popular-on-line-database" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
