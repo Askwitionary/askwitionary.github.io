@@ -166,6 +166,146 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Start-to-use-Git" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Start-to-use-Git/">Start to use Git</a>
+    </h1>
+  
+
+        
+        <a href="/Start-to-use-Git/" class="archive-article-date">
+  	<time datetime="2019-02-18T02:50:16.656Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h1><h2 id="Toolkits-installation"><a href="#Toolkits-installation" class="headerlink" title="Toolkits installation"></a>Toolkits installation</h2><ul>
+<li>Please refer to the other <a href="https://askwitionary.github.io/git/">guide</a> to install essential tools if you haven’t done so</li>
+</ul>
+<h1 id="Initial-Check"><a href="#Initial-Check" class="headerlink" title="Initial Check"></a>Initial Check</h1><h2 id="Login-Credential-Check"><a href="#Login-Credential-Check" class="headerlink" title="Login Credential Check"></a>Login Credential Check</h2><ul>
+<li>Make sure you can log in to our <a href="http://192.168.2.20:58000/" target="_blank" rel="noopener">gitlab</a></li>
+<li>Your user name should be the pinyin of your full name</li>
+</ul>
+<h2 id="Existing-Project-Check"><a href="#Existing-Project-Check" class="headerlink" title="Existing Project Check"></a>Existing Project Check</h2><h3 id="Check-Your-Project"><a href="#Check-Your-Project" class="headerlink" title="Check Your Project"></a>Check Your Project</h3><ul>
+<li>After you log in, you should find at least one project named by your full name</li>
+<li>Please check the following and make sure everything is the way it should be<ul>
+<li>The project should now be empty</li>
+<li>Your role should be <code>Developer</code></li>
+<li>The project should only be seen by you and 3 supervisors</li>
+<li>The project’s permission should be marked as <code>Internal</code></li>
+<li>Your project should be under the group <code>2019DataAnalysis</code></li>
+</ul>
+</li>
+<li>If you see any of the above conditions not met, please contact me asap so that I can help you fix it</li>
+</ul>
+<h3 id="Check-the-Master-Project"><a href="#Check-the-Master-Project" class="headerlink" title="Check the Master Project"></a>Check the Master Project</h3><ul>
+<li>There should also be another project named <code>tutoring_master</code> that you can see </li>
+<li>Your role should be <code>Developer</code></li>
+<li>You should see a simple project already in there</li>
+<li><strong>Note:</strong><ul>
+<li>You should <strong>NEVER</strong> push or create merge requests in this project</li>
+<li>You should <strong>NOT</strong> make any changes in this project</li>
+</ul>
+</li>
+</ul>
+<h3 id="Some-Notes"><a href="#Some-Notes" class="headerlink" title="Some Notes"></a>Some Notes</h3><ul>
+<li>This is not best practice to maintain projects. However, due to the fact that we will be using Gitlab to evaluate your performance, some permission issues need to be enforced</li>
+</ul>
+<h1 id="Initial-Setup-and-Practice"><a href="#Initial-Setup-and-Practice" class="headerlink" title="Initial Setup and Practice"></a>Initial Setup and Practice</h1><h2 id="Download-the-Master-Project"><a href="#Download-the-Master-Project" class="headerlink" title="Download the Master Project"></a>Download the Master Project</h2><ul>
+<li>Navigate to the project <code>tutoring_master</code></li>
+<li>Look for the <code>download</code> button<ul>
+<li>It should be located on the top right of the page</li>
+<li>It looks like a cloud with a down arrow</li>
+</ul>
+</li>
+<li>Download the master project to your local machine</li>
+<li>Note that this will be the place you spend most of your time coding. Save it to somewhere convenient</li>
+</ul>
+<h2 id="Edit-readme-md"><a href="#Edit-readme-md" class="headerlink" title="Edit readme.md"></a>Edit <code>readme.md</code></h2><ul>
+<li><p>You can open the project folder using <code>Pycharm</code> now</p>
+</li>
+<li><p>You can also edit <code>readme.md</code> using <code>Typora</code> or any text editor you prefer</p>
+</li>
+<li><p>Now delete everything in the file and type in the following</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">My name is &lt;Your Name&gt;.</span><br><span class="line">I am awesome!</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Save and exit</p>
+</li>
+<li><p>Commit and push your project to <strong>YOUR OWN PROJECT</strong> (The project with your name) </p>
+</li>
+<li><p>You can refer to this <a href="https://askwitionary.github.io/git/#Version-Control-Synchronizing">guide</a></p>
+</li>
+<li><p>Note:</p>
+<ul>
+<li>Use <code>http</code> to pull or push your project</li>
+<li>Never ever commit or push to the master project</li>
+<li>Any commit or push to the master project will result in losing points</li>
+</ul>
+</li>
+</ul>
+<h1 id="Future-Gitlab-Usage"><a href="#Future-Gitlab-Usage" class="headerlink" title="Future Gitlab Usage"></a>Future Gitlab Usage</h1><ul>
+<li>From now on, you should <strong>NOT</strong> send me any code via Wechat or Email. You should always push your code to your own project so that we can track changes and timestamps</li>
+<li>You can find <code>issues</code> on the left panel inside your project<ul>
+<li>All future tasks will be assigned here with descriptions and deadline</li>
+<li>It is your responsibility to manage your issues</li>
+<li>I will not be picky on this in the first month. However, Starting from Mar. 20th I will evaluate your performance solely depending on what I can see on gitlab</li>
+</ul>
+</li>
+<li>You can create your own documentation for your project in <code>wiki</code> panel<ul>
+<li>Use <code>markdown</code> to write your wiki!</li>
+<li>You can also save your notes here for better management</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/Start-to-use-Git/">Show All >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Tasks_SQL" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -1812,80 +1952,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/mysql/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/hexo/">Hexo Setup and Commands</a>
-    </h1>
-  
-
-        
-        <a href="/hexo/" class="archive-article-date">
-  	<time datetime="2019-01-14T02:19:49.198Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hexo-io-toolkit-installation"><a href="#Hexo-io-toolkit-installation" class="headerlink" title="Hexo.io toolkit installation"></a>Hexo.io toolkit installation</h1><p><br></p>
-<h2 id="Stable-edition-8-as-of-the-date-of-editing"><a href="#Stable-edition-8-as-of-the-date-of-editing" class="headerlink" title="Stable edition 8 (as of the date of editing)"></a>Stable edition 8 (as of the date of editing)</h2><ul>
-<li><p>Add source</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh</span><br><span class="line">sudo bash nodesource_setup.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Installation</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><br></p>
-<h2 id="Make-sure-you-have-Git-and-Node-js"><a href="#Make-sure-you-have-Git-and-Node-js" class="headerlink" title="Make sure you  have Git and Node.js"></a>Make sure you  have <code>Git</code> and <code>Node.js</code></h2><p><br></p>
-<h2 id="Install-Hexo-with-npm"><a href="#Install-Hexo-with-npm" class="headerlink" title="Install Hexo with npm"></a>Install Hexo with <code>npm</code></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/hexo/">Show All >></a>
         </p>
       
 

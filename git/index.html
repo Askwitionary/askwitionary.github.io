@@ -16,7 +16,7 @@
 <meta property="og:description" content="Git 安装Linux Linux用户可以在命令行输入git测试Git的安装 一般Linux自带git的，如果没有安装，则运行下列命令  12sudo apt-get updatesudo apt-get install git-all Windows 前往https://git-scm.com/download/win下载64-bit Git for Windows Setup 下载后运行安装程">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://git-scm.com/figures/18333fig0316-tn.png">
-<meta property="og:updated_time" content="2018-12-27T02:54:18.000Z">
+<meta property="og:updated_time" content="2019-02-18T02:50:07.007Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Related">
 <meta name="twitter:description" content="Git 安装Linux Linux用户可以在命令行输入git测试Git的安装 一般Linux自带git的，如果没有安装，则运行下列命令  12sudo apt-get updatesudo apt-get install git-all Windows 前往https://git-scm.com/download/win下载64-bit Git for Windows Setup 下载后运行安装程">
@@ -216,11 +216,13 @@
 </ul>
 <p><br></p>
 <h1 id="Git-Related-Commands"><a href="#Git-Related-Commands" class="headerlink" title="Git Related Commands"></a>Git Related Commands</h1><p><br></p>
-<h2 id="Git-Global-Setup"><a href="#Git-Global-Setup" class="headerlink" title="Git Global Setup"></a>Git Global Setup</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"Lingxiao Duan"</span></span><br><span class="line">git config --global user.email <span class="string">"duanlingxiao1219@sina.com"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-Global-Setup"><a href="#Git-Global-Setup" class="headerlink" title="Git Global Setup"></a>Git Global Setup</h2><p>Sample</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"Lingxiao Duan"</span></span><br><span class="line">git config --global user.email <span class="string">"duanlingxiao1219@sina.com"</span></span><br></pre></td></tr></table></figure>
 <p><br></p>
 <h2 id="Checking-Status"><a href="#Checking-Status" class="headerlink" title="Checking Status"></a>Checking Status</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 <p><br></p>
-<h2 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h2><ul>
+<h2 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h2><p>You don’t want to upload large data files like pictures, videos, sound clips or large text files. Use <code>.gitignore</code> to tell git to ignore files with certain characteristics (extension, naming etc.)</p>
+<ul>
 <li><p>All files in a directory</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/*</span><br></pre></td></tr></table></figure>
 </li>
@@ -229,9 +231,13 @@
 </li>
 </ul>
 <p><br></p>
-<h2 id="Version-Control-Synchronizing"><a href="#Version-Control-Synchronizing" class="headerlink" title="Version Control (Synchronizing)"></a>Version Control (Synchronizing)</h2><ul>
+<h2 id="Version-Control-Synchronizing"><a href="#Version-Control-Synchronizing" class="headerlink" title="Version Control (Synchronizing)"></a>Version Control (Synchronizing)</h2><p>You should find your git address on the top of your project. It should looks like this:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://192.168.2.20/2019DataAnalysis/tutoring_master.git</span></span><br></pre></td></tr></table></figure>
+<p>Note that due to some bug that we have on gitlab, the link it provides is missing port number. You should add it manually. Our port number is <code>58000</code>. You should add it after our IP address and a <code>:</code>.</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://192.168.2.20:58000/2019DataAnalysis/tutoring_master.git</span></span><br></pre></td></tr></table></figure>
+<ul>
 <li><p>Creating a new repository</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@9e5415541ac4:bigdata/processing.git</span><br><span class="line"><span class="built_in">cd</span> processing</span><br><span class="line">touch README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"add README"</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;git_address&gt;</span><br><span class="line"><span class="built_in">cd</span> processing</span><br><span class="line">touch README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"add README"</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Setting up git to an existing folder</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> existing_folder</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@&lt;git_address&gt;:&lt;group_name&gt;/&lt;project_name&gt;.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"Initial commit"</span></span><br><span class="line">git status</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>

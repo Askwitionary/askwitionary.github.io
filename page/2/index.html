@@ -166,6 +166,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo/">Hexo Setup and Commands</a>
+    </h1>
+  
+
+        
+        <a href="/hexo/" class="archive-article-date">
+  	<time datetime="2019-01-14T02:19:49.198Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Hexo-io-toolkit-installation"><a href="#Hexo-io-toolkit-installation" class="headerlink" title="Hexo.io toolkit installation"></a>Hexo.io toolkit installation</h1><p><br></p>
+<h2 id="Stable-edition-8-as-of-the-date-of-editing"><a href="#Stable-edition-8-as-of-the-date-of-editing" class="headerlink" title="Stable edition 8 (as of the date of editing)"></a>Stable edition 8 (as of the date of editing)</h2><ul>
+<li><p>Add source</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh</span><br><span class="line">sudo bash nodesource_setup.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Installation</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h2 id="Make-sure-you-have-Git-and-Node-js"><a href="#Make-sure-you-have-Git-and-Node-js" class="headerlink" title="Make sure you  have Git and Node.js"></a>Make sure you  have <code>Git</code> and <code>Node.js</code></h2><p><br></p>
+<h2 id="Install-Hexo-with-npm"><a href="#Install-Hexo-with-npm" class="headerlink" title="Install Hexo with npm"></a>Install Hexo with <code>npm</code></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/hexo/">Show All >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -212,11 +286,13 @@
 </ul>
 <p><br></p>
 <h1 id="Git-Related-Commands"><a href="#Git-Related-Commands" class="headerlink" title="Git Related Commands"></a>Git Related Commands</h1><p><br></p>
-<h2 id="Git-Global-Setup"><a href="#Git-Global-Setup" class="headerlink" title="Git Global Setup"></a>Git Global Setup</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"Lingxiao Duan"</span></span><br><span class="line">git config --global user.email <span class="string">"duanlingxiao1219@sina.com"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-Global-Setup"><a href="#Git-Global-Setup" class="headerlink" title="Git Global Setup"></a>Git Global Setup</h2><p>Sample</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"Lingxiao Duan"</span></span><br><span class="line">git config --global user.email <span class="string">"duanlingxiao1219@sina.com"</span></span><br></pre></td></tr></table></figure>
 <p><br></p>
 <h2 id="Checking-Status"><a href="#Checking-Status" class="headerlink" title="Checking Status"></a>Checking Status</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 <p><br></p>
-<h2 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h2><ul>
+<h2 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h2><p>You don’t want to upload large data files like pictures, videos, sound clips or large text files. Use <code>.gitignore</code> to tell git to ignore files with certain characteristics (extension, naming etc.)</p>
+<ul>
 <li><p>All files in a directory</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/*</span><br></pre></td></tr></table></figure>
 </li>
@@ -225,9 +301,13 @@
 </li>
 </ul>
 <p><br></p>
-<h2 id="Version-Control-Synchronizing"><a href="#Version-Control-Synchronizing" class="headerlink" title="Version Control (Synchronizing)"></a>Version Control (Synchronizing)</h2><ul>
+<h2 id="Version-Control-Synchronizing"><a href="#Version-Control-Synchronizing" class="headerlink" title="Version Control (Synchronizing)"></a>Version Control (Synchronizing)</h2><p>You should find your git address on the top of your project. It should looks like this:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://192.168.2.20/2019DataAnalysis/tutoring_master.git</span></span><br></pre></td></tr></table></figure>
+<p>Note that due to some bug that we have on gitlab, the link it provides is missing port number. You should add it manually. Our port number is <code>58000</code>. You should add it after our IP address and a <code>:</code>.</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://192.168.2.20:58000/2019DataAnalysis/tutoring_master.git</span></span><br></pre></td></tr></table></figure>
+<ul>
 <li><p>Creating a new repository</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@9e5415541ac4:bigdata/processing.git</span><br><span class="line"><span class="built_in">cd</span> processing</span><br><span class="line">touch README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"add README"</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;git_address&gt;</span><br><span class="line"><span class="built_in">cd</span> processing</span><br><span class="line">touch README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"add README"</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Setting up git to an existing folder</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> existing_folder</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@&lt;git_address&gt;:&lt;group_name&gt;/&lt;project_name&gt;.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"Initial commit"</span></span><br><span class="line">git status</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
