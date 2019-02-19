@@ -166,6 +166,284 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python_environment" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/python_environment/">Setting up Your Coding Environment</a>
+    </h1>
+  
+
+        
+        <a href="/python_environment/" class="archive-article-date">
+  	<time datetime="2019-01-14T02:19:49.200Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p><strong>写代码是一个基于英文语言环境的活儿。从今天开始，凡是与代码相关的，如编译器、环境、文档中与代码相关的内容，请尽量使用英文，以给自己创造这个语言环境</strong></p>
+<p><br></p>
+<p><strong>开始会是一个非常艰难的过程，坚持3个月回望，一定会看到不一样</strong></p>
+<p><br></p>
+<h1 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h1><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><ul>
+<li>Download the installer<ul>
+<li>For Windows:<br>Go to <a href="https://www.anaconda.com/download/#windows" target="_blank" rel="noopener">https://www.anaconda.com/download/#windows</a></li>
+<li>For Linux:<br>Go to <a href="https://www.anaconda.com/download/#linux" target="_blank" rel="noopener">https://www.anaconda.com/download/#linux</a><br>(To be Continued)</li>
+<li>For Max OS:<br>Go to <a href="https://www.anaconda.com/download/#macos" target="_blank" rel="noopener">https://www.anaconda.com/download/#macos</a><br><br></li>
+<li>Download Anaconda 5.3.1 (as of Dec. 12th 2018) 64-bit version for <strong>Python 3.7</strong></li>
+<li>It should be a single file of roughly 630 to 640 megabytes</li>
+</ul>
+</li>
+<li>If you reside in China and cannot connect to the source or the download is very slow, you can try download it <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">here</a>.</li>
+</ul>
+<h3 id="Windows-Users"><a href="#Windows-Users" class="headerlink" title="Windows Users"></a>Windows Users</h3><ul>
+<li>Run the installer once the download is finished</li>
+<li>Click on “Next” until you are asked “Install for:”, then pick “All Users”</li>
+<li>It is recommended to install your Anaconda on your <strong>system disk</strong>, namely <strong>disk C</strong> if your are using Windows</li>
+<li>Go with the default setup for the rest of configurations</li>
+<li><strong>Do not install MS VSCode</strong></li>
+</ul>
+<h3 id="Linux-Ubuntu-Users"><a href="#Linux-Ubuntu-Users" class="headerlink" title="Linux(Ubuntu) Users"></a>Linux(Ubuntu) Users</h3><ul>
+<li><p>Locate the file you have downloaded</p>
+</li>
+<li><p><strong>Right Click</strong> the downloaded file and select <code>Properties</code></p>
+</li>
+<li><p>Select <code>Permissions</code> tab and make sure to check <code>Allow Executing file as program</code></p>
+</li>
+<li><p>Open up a terminal at the directory of your downloaded file</p>
+</li>
+<li><p>run the <code>.sh</code> file</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./Anaconda3-2018.12-Linux-x86_64.sh			<span class="comment"># Note that file name could be different</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Follow the the installation steps and you will be good</p>
+</li>
+<li>Make sure you choose <code>Yes</code> when the installer ask you whether to <strong>add Anaconda to the PATH</strong> or not. Otherwise you will need to add it manually for Anaconda to work<ul>
+<li>To add it manually, use your favorite text editor and edit <code>sudo vim ~/.bashrc</code></li>
+<li>Add the line <code>export PATH=&quot;~/anaconda3/bin:$PATH&quot;</code></li>
+<li>Save the file and exit</li>
+</ul>
+</li>
+<li><strong>Remember not to install MS VSCode unless you really use it</strong></li>
+<li>You might need to restart or refresh path to make <code>conda</code> work in command line</li>
+</ul>
+<h2 id="Setting-up-a-Basic-Python-3-6-Env"><a href="#Setting-up-a-Basic-Python-3-6-Env" class="headerlink" title="Setting up a Basic Python 3.6 Env"></a>Setting up a Basic Python 3.6 Env</h2><ul>
+<li><p>Find “Anaconda Prompt” in your Start menu and <strong>open it as administrator</strong></p>
+</li>
+<li><p>Type in <code>conda --version</code> to check if your version is 4.5.11</p>
+<ul>
+<li>If not, execute <code>conda update conda</code> to update your anaconda</li>
+</ul>
+</li>
+<li><p>Create your very first conda environment by executing</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name &lt;env_name&gt; python=3.x</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Replace <code>&lt;env_name&gt;</code> with environment name and <code>x</code> with specific python version you want</p>
+</li>
+<li><p>The following is a simple example</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name happy python=3.6</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Go ahead and type <code>y</code> to confirm creating the environment</p>
+</li>
+<li><p>Now conda should be downloading required packages for you automatically</p>
+</li>
+<li><p>When it is finished, you can type <code>conda activate happy</code> to activate your environment</p>
+</li>
+<li><p>Now you should see the environment name at the front of line has been changed from <code>(base)</code> to <code>(happy)</code> </p>
+</li>
+<li><p>If you want to make sure it is truly working without any problem, you can try to follow the steps below within your environment “happy”</p>
+<ul>
+<li><p>Checking python version</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -V</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Make sure you get something like <code>Python 3.6.7 :: Anaconda, Inc.</code></li>
+</ul>
+</li>
+<li><p>Run a simple “Hello World” in Python</p>
+<ul>
+<li>Execute <code>python</code> and wait for the line header to be something like <code>&gt;&gt;&gt;</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello World, mi amigo!"</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Make sure it is printing the string you entered correctly without any errors</li>
+<li>BTW mi amigo 是我的朋友的意思</li>
+</ul>
+</li>
+<li><p>Type <code>exit()</code> to exit to command line prompt of your environment</p>
+</li>
+</ul>
+</li>
+<li><p>Now you can deactivate your environment by executing</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Now you should see the environment name at the front of line has been changed from <code>(happy)</code> back to <code>(base)</code> </p>
+</li>
+<li><p><strong>It is the best to create a separate environment for each project unless multiple projects are using exactly the same packages. Many packages has conflicts and some packages may cause unstable issues. There are even more reasons why we need to make “small rooms” for each of our projects, but there is no good to explain it in detail here (我也说不清楚哈哈). This is why Python scripts are mostly deployed within a “container” using docker</strong>， which we will talk about in the future.</p>
+</li>
+</ul>
+<p><br></p>
+<h1 id="Pycharm"><a href="#Pycharm" class="headerlink" title="Pycharm"></a>Pycharm</h1><h2 id="Installation-1"><a href="#Installation-1" class="headerlink" title="Installation"></a>Installation</h2><ul>
+<li>请使用英文版请使用英文版请使用英文版！！！<ul>
+<li>未来看文档大多都会是英文版的。慢慢开始熟悉，别图一时之快以后天天郁闷。</li>
+</ul>
+</li>
+<li>Download the installer<ul>
+<li>For Windows:<br>Go to <a href="https://www.jetbrains.com/pycharm/download/#section=windows" target="_blank" rel="noopener">https://www.jetbrains.com/pycharm/download/#section=windows</a></li>
+<li>For Linux:<br>Go to <a href="https://www.jetbrains.com/pycharm/download/#section=linux" target="_blank" rel="noopener">https://www.jetbrains.com/pycharm/download/#section=linux</a></li>
+<li>For Max OS:<br>Go to <a href="https://www.jetbrains.com/pycharm/download/#section=mac" target="_blank" rel="noopener">https://www.jetbrains.com/pycharm/download/#section=mac</a><br><br></li>
+<li>Download <strong>Pycharm Professional 64-bit version</strong></li>
+</ul>
+</li>
+<li>Run the installer once the download is finished</li>
+<li>Click on “Next” until you are asked where you want your Pycharm to be installed</li>
+<li>You do not need to install your Pycharm on your system disk</li>
+<li>Click on “Next” and choose “64-bit launcher” to be created on your desktop</li>
+<li>Go with the default setup for the rest of configurations</li>
+</ul>
+<h2 id="First-time-running-Pycharm"><a href="#First-time-running-Pycharm" class="headerlink" title="First time running Pycharm"></a>First time running Pycharm</h2><ul>
+<li>Run Pycharm after it is completely installed</li>
+<li>Choose “Do not import settings” if you are first time using Pycharm</li>
+<li>Accept everything and continue</li>
+<li>The next step does not matter, choose whatever you what. Personally I prefer to go with not sending them usage statistics because I think my coding style is too dumb and I feel ashamed to let others know how I code.</li>
+<li>Choose your color theme</li>
+<li>Activate your Pycharm<ul>
+<li>Now Pycharm should be asking you to activate the product</li>
+<li>Go to <a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a><ul>
+<li><strong>Windows:</strong> Go to <code>C:\Windows\System32\drivers\etc</code> on your system and open file named <code>hosts</code> with your favorite text editor like Notepad++ as administrator</li>
+<li><strong>Linux:</strong> <code>sudo vim /etc/hosts</code></li>
+</ul>
+</li>
+<li>At the very end of the file, insert a new line with <code>0.0.0.0 account.jetbrains.com</code></li>
+<li>Save and exit</li>
+<li>Click on “获得注册码”</li>
+<li>Copy your key</li>
+<li>Go back to Pycharm and choose “activation key” and paste your key below</li>
+<li>Now your Pycharm should be <strong>illegally activated</strong> <ul>
+<li>这么注册当然是非法的啦，但是中国人的智慧不用白不用，不然这软件也太贵了=-=</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Create-your-first-project"><a href="#Create-your-first-project" class="headerlink" title="Create your first project"></a>Create your first project</h2><ul>
+<li><p>Choose “+ Create New Project”</p>
+</li>
+<li><p>Choose “Pure Python” from the left</p>
+</li>
+<li><p>Change your project location at the top to be something like <code>D:\PycharmProjects\test</code> </p>
+<ul>
+<li>Note that you do not need to put your scripts in your system directory</li>
+<li>It is better to use <code>PycharmProjects</code> folder to keep all your projects organized</li>
+</ul>
+</li>
+<li><p>Change your project name from “untitled” to “test”, or any other name you prefer in the future. For now for simplicity, let’s just use “test”</p>
+</li>
+<li><p>Click on the little triangle right below “Location”</p>
+</li>
+<li><p>Choose “Existing interpreter”. Now we need to tell Pycharm to use the python interpreter we created inside our environment “happy”</p>
+</li>
+<li><p>Click on “…” button, a window titled “Add Python Interpreter” will pop up</p>
+</li>
+<li><p>Choose “Conda Environment</p>
+</li>
+<li><p>Locate where your python is inside your environment. For me it is located at <code>C:\ProgramData\Anaconda3\envs\happy\python.exe</code></p>
+<ul>
+<li><p>Note that you may need to show hidden files to see the folders</p>
+</li>
+<li><p>If you cannot find your python.exe, follow the steps below</p>
+<ul>
+<li><p>Open up your Anaconda prompt like we mentioned above</p>
+</li>
+<li><p>Activate our environment like we mentioned above</p>
+</li>
+<li><p>Execute <code>where python</code> after you see your line header to be <code>(happy)</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\Anaconda3\envs\happy\python.exe</span><br><span class="line">C:\ProgramData\Anaconda3\python.exe</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use the first path to find your python.exe</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Now confirm you have chosen the right interpreter, then you should be able to click on “create”</p>
+</li>
+<li><p>You should be able to find a folder icon on the left named “test”. Right click on it and choose “New” then “Python File”</p>
+</li>
+<li><p>Name your new Python file “hello” and click “OK”</p>
+</li>
+<li><p>Now you should be able to see hello.py</p>
+</li>
+<li><p>Type in the following python code</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello, 很棒，你已经完成了Python环境和编译器的配置"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Right click the blank screen and select “Run ‘hello’”</p>
+</li>
+<li><p>You should be able to see a string at the bottom in the “Run” subwindow</p>
+</li>
+</ul>
+<h3 id="Linux-Users-Important"><a href="#Linux-Users-Important" class="headerlink" title="Linux Users (Important)"></a>Linux Users (Important)</h3><p>Once inside Pycharm, Click on <code>Tools</code>, and click on <code>Create Desktop Entry</code> to create an icon for Pycharm so that we won’t need to use command line to launch Pycharm everytime</p>
+<p><br></p>
+<h1 id="Using-pip-a-python-package-manager"><a href="#Using-pip-a-python-package-manager" class="headerlink" title="Using pip, a python package manager"></a>Using <code>pip</code>, a python package manager</h1><p>Python is famous for a lot of things. One of the most important aspect is that it has a pretty good package management tool. </p>
+<p><br></p>
+<h2 id="Check-if-you-already-have-pip-installed"><a href="#Check-if-you-already-have-pip-installed" class="headerlink" title="Check if you already have pip installed"></a>Check if you already have <code>pip</code> installed</h2><ul>
+<li><p>Execute the following command <strong>inside your environment</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(happy) lduan@lduan-G750JHA:~$ pip -V		<span class="comment"># Just to show that you need to run the command within your environment</span></span><br><span class="line">pip -V										<span class="comment"># This is the actual command</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>You should get something that looks like (Note that if your are using windows, the start of the path should be different)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip 18.1 from /home/lduan/anaconda3/envs/happy/lib/python3.6/site-packages/pip (python 3.6)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>If you have pip version lower than 18.1 (as of 2018.12) you can consider upgrade it (not important if it is not too far behind)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ -U pip</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/python_environment/">Show All >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-mysql" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
