@@ -67,6 +67,8 @@ var _hmt = _hmt || [];
 			
 				<li><a href="/">Homepage</a></li>
 	        
+				<li><a href="/Announcement">Announcement</a></li>
+	        
 				<li><a href="/Tasks_DT/">Tasks_DT</a></li>
 	        
 				<li><a href="/Tasks_SQL/">Tasks_SQL</a></li>
@@ -137,6 +139,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -159,13 +163,15 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">Homepage</a></li>
+					<li style="width: 20%"><a href="/">Homepage</a></li>
 		        
-					<li style="width: 25%"><a href="/Tasks_DT/">Tasks_DT</a></li>
+					<li style="width: 20%"><a href="/Announcement">Announcement</a></li>
 		        
-					<li style="width: 25%"><a href="/Tasks_SQL/">Tasks_SQL</a></li>
+					<li style="width: 20%"><a href="/Tasks_DT/">Tasks_DT</a></li>
 		        
-					<li style="width: 25%"><a href="/Start-to-use-Git/">Start-to-use-Git</a></li>
+					<li style="width: 20%"><a href="/Tasks_SQL/">Tasks_SQL</a></li>
+		        
+					<li style="width: 20%"><a href="/Start-to-use-Git/">Start-to-use-Git</a></li>
 		        
 				</ul>
 			</nav>
@@ -181,6 +187,95 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-python_related" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/python_related/">Python Related</a>
+    </h1>
+  
+
+        
+        <a href="/python_related/" class="archive-article-date">
+  	<time datetime="2019-01-14T02:19:49.201Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="pip"><a href="#pip" class="headerlink" title="pip"></a><code>pip</code></h1><p><br></p>
+<h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p><br></p>
+<ul>
+<li><p>Checking <code>pip</code> version</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip --version</span><br><span class="line">pip3 --version</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Upgrade using tsinghua.edu source</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ -U pip</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h2 id="Common-Error-Handling"><a href="#Common-Error-Handling" class="headerlink" title="Common Error Handling"></a>Common Error Handling</h2><p><br></p>
+<h3 id="ImportError-after-pip-upgrade"><a href="#ImportError-after-pip-upgrade" class="headerlink" title="ImportError after pip upgrade"></a>ImportError after pip upgrade</h3><ul>
+<li><p>Error log</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/bin/pip3&quot;, line 9, in &lt;module&gt;</span><br><span class="line">    from pip import main</span><br><span class="line">ImportError: cannot import name &apos;main&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Find which pip you are calling</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">which pip</span><br><span class="line"># Or pip3</span><br><span class="line">which pip3</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Edit the pip file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/bin/pip</span><br><span class="line"># Or if you are using pip3</span><br><span class="line">sudo vim /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Change the following lines</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> pip <span class="keyword">import</span> __main__</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">     sys.exit(__main__._main())</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/python_related/">Show All >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-python_environment" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
