@@ -182,6 +182,117 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sogou" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/sogou/">Installing Sogou Pinyin for Ubuntu 18.04</a>
+    </h1>
+  
+
+        
+        <a href="/sogou/" class="archive-article-date">
+  	<time datetime="2019-01-14T02:19:49.202Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Installing-Sogou-Pinyin-Input-for-Ubuntu-18-04"><a href="#Installing-Sogou-Pinyin-Input-for-Ubuntu-18-04" class="headerlink" title="Installing Sogou Pinyin Input for Ubuntu 18.04"></a>Installing Sogou Pinyin Input for Ubuntu 18.04</h1><p><br></p>
+<h2 id="Check-if-fcitx-is-installed"><a href="#Check-if-fcitx-is-installed" class="headerlink" title="Check if fcitx is installed"></a>Check if fcitx is installed</h2><ul>
+<li><code>fcitx</code></li>
+<li>If it is not installed<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install fcitx-bin</span><br><span class="line">sudo apt-get install fcitx-table</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h2 id="Configure-input-method-system"><a href="#Configure-input-method-system" class="headerlink" title="Configure input method system"></a>Configure input method system</h2><ul>
+<li><p>Open <code>Settings -&gt; Region &amp; Language -&gt; Manage Installed Languages</code></p>
+</li>
+<li><p>If the system prompts a window telling you that there are missing language support package, go ahead and install them</p>
+</li>
+<li><p>Set Keyboard input method system from <code>IBus</code> to <code>fcitx</code></p>
+</li>
+</ul>
+<p><br></p>
+<h2 id="Download-Sogou-pinyin"><a href="#Download-Sogou-pinyin" class="headerlink" title="Download Sogou pinyin"></a>Download Sogou pinyin</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pinyin.sogou.com/linux/?r=pinyin</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Download the 64-bit version of Sogou pinyin Input</li>
+</ul>
+<h2 id="Install-sogoupinyin-deb"><a href="#Install-sogoupinyin-deb" class="headerlink" title="Install sogoupinyin.deb"></a>Install sogoupinyin.deb</h2><ul>
+<li>Double click the <code>.deb</code> icon</li>
+<li>Click <code>install</code> and follow the prompt to enter your password</li>
+</ul>
+<h2 id="Reboot-your-Ubuntu-system"><a href="#Reboot-your-Ubuntu-system" class="headerlink" title="Reboot your Ubuntu system"></a>Reboot your Ubuntu system</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
+<p>Now you should be able to find Sogou pinyin input in your input method panel</p>
+<p><br></p>
+<p>=======================================================================================</p>
+<h2 id="查看fcitx是否已经安装"><a href="#查看fcitx是否已经安装" class="headerlink" title="查看fcitx是否已经安装"></a>查看fcitx是否已经安装</h2><ul>
+<li><p>在命令行键入<code>fcitx</code></p>
+</li>
+<li><p>如果没有安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install fcitx-bin</span><br><span class="line">sudo apt-get install fcitx-table</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h2 id="配置输入系统"><a href="#配置输入系统" class="headerlink" title="配置输入系统"></a>配置输入系统</h2><ul>
+<li><p>打开<code>设置 -&gt; 地区和语言 -&gt; 管理已安装的语言</code></p>
+</li>
+<li><p>如果系统告诉你要安装一些包，就安装吧</p>
+</li>
+<li><p>把下方的键盘输入方法从<code>IBus</code> 改成 <code>fcitx</code></p>
+</li>
+</ul>
+<p><br></p>
+<h2 id="下载搜狗拼音"><a href="#下载搜狗拼音" class="headerlink" title="下载搜狗拼音"></a>下载搜狗拼音</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pinyin.sogou.com/linux/?r=pinyin</span><br></pre></td></tr></table></figure>
+<ul>
+<li>下载64位的搜狗拼音输入法</li>
+</ul>
+<h2 id="双击刚才下载的-deb包来安装搜狗拼音输入法主程序"><a href="#双击刚才下载的-deb包来安装搜狗拼音输入法主程序" class="headerlink" title="双击刚才下载的.deb包来安装搜狗拼音输入法主程序"></a>双击刚才下载的.deb包来安装搜狗拼音输入法主程序</h2><h2 id="重启你的电脑"><a href="#重启你的电脑" class="headerlink" title="重启你的电脑"></a>重启你的电脑</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/sogou/">Show All >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python_related" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     

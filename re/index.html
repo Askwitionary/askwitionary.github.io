@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://askwitionary.github.io">
-  <title>A Simple Tech Blog</title>
+  <title>Regular Expression | A Simple Tech Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="A Simple Tech Blog">
-<meta property="og:url" content="https://askwitionary.github.io/index.html">
+  <meta name="description" content="READ ME FIRST以下内容都是整理来的。只是希望能给你一个正则表达式的基本概念。正则表达式在文本处理方面有着基本却非常重要的应用。尤其对于像中文这种没有明确分词的语言，使用正则表达式不仅可以准确地找到具有相应特征的文本，还要比循环遍历要快得多。 首先推荐一个在线测试正则表达式的网站。点这里  复制一段文本在TESTING STRING栏里 在REGULAR EXPRESSION栏输入你想要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Regular Expression">
+<meta property="og:url" content="https://askwitionary.github.io/re/index.html">
 <meta property="og:site_name" content="A Simple Tech Blog">
+<meta property="og:description" content="READ ME FIRST以下内容都是整理来的。只是希望能给你一个正则表达式的基本概念。正则表达式在文本处理方面有着基本却非常重要的应用。尤其对于像中文这种没有明确分词的语言，使用正则表达式不仅可以准确地找到具有相应特征的文本，还要比循环遍历要快得多。 首先推荐一个在线测试正则表达式的网站。点这里  复制一段文本在TESTING STRING栏里 在REGULAR EXPRESSION栏输入你想要">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-14T06:20:45.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A Simple Tech Blog">
+<meta name="twitter:title" content="Regular Expression">
+<meta name="twitter:description" content="READ ME FIRST以下内容都是整理来的。只是希望能给你一个正则表达式的基本概念。正则表达式在文本处理方面有着基本却非常重要的应用。尤其对于像中文这种没有明确分词的语言，使用正则表达式不仅可以准确地找到具有相应特征的文本，还要比循环遍历要快得多。 首先推荐一个在线测试正则表达式的网站。点这里  复制一段文本在TESTING STRING栏里 在REGULAR EXPRESSION栏输入你想要">
   
     <link rel="alternative" href="/atom.xml" title="A Simple Tech Blog" type="application/atom+xml">
   
@@ -180,16 +184,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-re" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-re" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/re/">Regular Expression</a>
+    <h1 class="article-title" itemprop="name">
+      Regular Expression
     </h1>
   
 
@@ -508,6 +510,37 @@ var _hmt = _hmt || [];
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>=这主题居然还设计了这个=<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/Askwitionary/documents/master/imgs/techblog/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/Askwitionary/documents/master/imgs/techblog/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -515,16 +548,75 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/re/">Show All >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://askwitionary.github.io/re/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/Announcement/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Announcement</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -539,1604 +631,43 @@ var _hmt = _hmt || [];
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Announcement" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Announcement/">Announcement</a>
-    </h1>
-  
-
-        
-        <a href="/Announcement/" class="archive-article-date">
-  	<time datetime="2019-03-05T07:14:27.988Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="2019-03-05"><a href="#2019-03-05" class="headerlink" title="2019.03.05"></a>2019.03.05</h1><ul>
-<li>注意提交代码时把做的<strong>主要修改说明</strong>放在<code>-m</code>后面的消息里</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Announcement/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#READ-ME-FIRST"><span class="toc-number">1.</span> <span class="toc-text">READ ME FIRST</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是正则表达式"><span class="toc-number">2.</span> <span class="toc-text">什么是正则表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本语法"><span class="toc-number">3.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式全集"><span class="toc-number">4.</span> <span class="toc-text">正则表达式全集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用片段"><span class="toc-number">5.</span> <span class="toc-text">常用片段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#肯定预查"><span class="toc-number">5.1.</span> <span class="toc-text">肯定预查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T命名捕获组"><span class="toc-number">5.2.</span> <span class="toc-text">T命名捕获组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匹配模式"><span class="toc-number">6.</span> <span class="toc-text">匹配模式</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-会议议题及大纲" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/会议议题及大纲/">会议议题及大纲</a>
-    </h1>
-  
-
-        
-        <a href="/会议议题及大纲/" class="archive-article-date">
-  	<time datetime="2019-02-18T08:04:49.393Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="2019-03-04"><a href="#2019-03-04" class="headerlink" title="2019.03.04"></a>2019.03.04</h1><ul>
-<li>决策树-代码效率——刘英晒</li>
-<li>时间复杂度与空间复杂度</li>
-<li>接下来的任务与安排</li>
-</ul>
-<h1 id="2019-02-19"><a href="#2019-02-19" class="headerlink" title="2019.02.19"></a>2019.02.19</h1><ul>
-<li><p>决策树——张俊川</p>
-</li>
-<li><p>讨论</p>
-<ul>
-<li>如何寻找字符串的“距离”</li>
-</ul>
-</li>
-<li><p>评分体系</p>
-<ul>
-<li>周期：季度</li>
-<li>平台：Gitlab</li>
-<li>项目评分<ul>
-<li>任务完成度：60%</li>
-<li>时间：15%</li>
-<li>代码规范：10%</li>
-<li>问答：15%</li>
-<li>额外任务奖励：0%~20%</li>
-</ul>
-</li>
-<li>总评<ul>
-<li>项目分：75%</li>
-<li>进步分：20%</li>
-<li>态度分：-10%~15%<ul>
-<li>文档完整度</li>
-<li>语法</li>
-<li>注释</li>
-<li>回应速度</li>
-<li>讨论活跃度</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/会议议题及大纲/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Issues" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Issues/">Issues</a>
-    </h1>
-  
-
-        
-        <a href="/Issues/" class="archive-article-date">
-  	<time datetime="2019-02-18T03:16:04.055Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Edit-readme-md"><a href="#Edit-readme-md" class="headerlink" title="Edit readme.md"></a>Edit <code>readme.md</code></h1><h2 id="2019-03-05"><a href="#2019-03-05" class="headerlink" title="2019.03.05"></a>2019.03.05</h2><h3 id="Tasks"><a href="#Tasks" class="headerlink" title="Tasks"></a>Tasks</h3><ul>
-<li>Edit <code>readme.md</code> to include the following <strong>in Chinese</strong><ul>
-<li>Project summary<ul>
-<li>What’s in this project</li>
-<li>Abstract and purpose</li>
-</ul>
-</li>
-<li>Project structure<ul>
-<li>Function/Method location</li>
-<li>Function/Method functionality</li>
-</ul>
-</li>
-<li>Configuration guidance<ul>
-<li>How to configure your project</li>
-</ul>
-</li>
-<li>Data folder explanation<ul>
-<li>Though not uploaded, what is your data folder looks like? How should people prepare data to use your Function/Method?</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Keep in mind that in the future as you develop your project, you should update your <code>readme.md</code> every time you make significant progress. Failing to do so will also result in points deduction.</strong></li>
-</ul>
-<h3 id="Rubrics"><a href="#Rubrics" class="headerlink" title="Rubrics"></a>Rubrics</h3><ul>
-<li>Project summary: 1</li>
-<li>Project structure: 3</li>
-<li>Configuration guidance: 1</li>
-<li>Data folder explanation: 2</li>
-<li><strong>Total: 7</strong></li>
-</ul>
-<h1 id="Decision-Tree-Presentation"><a href="#Decision-Tree-Presentation" class="headerlink" title="Decision Tree - Presentation"></a>Decision Tree - Presentation</h1><h2 id="2019-03-05-1"><a href="#2019-03-05-1" class="headerlink" title="2019.03.05"></a>2019.03.05</h2><h3 id="Rubrics-1"><a href="#Rubrics-1" class="headerlink" title="Rubrics"></a>Rubrics</h3><ul>
-<li>用时: 2</li>
-<li>内容: 6</li>
-<li>问题回答: 3</li>
-<li>PPT质量: 3</li>
-<li>台风: 1</li>
-<li><strong>总分</strong>: 15</li>
-</ul>
-<h1 id="Decision-Tree"><a href="#Decision-Tree" class="headerlink" title="Decision Tree"></a>Decision Tree</h1><h2 id="2019-03-05-2"><a href="#2019-03-05-2" class="headerlink" title="2019.03.05"></a>2019.03.05</h2><h3 id="Tasks-1"><a href="#Tasks-1" class="headerlink" title="Tasks"></a>Tasks</h3><p>Please refer to <a href="this post">https://askwitionary.github.io/Tasks_DT/</a> for detailed explanation.</p>
-<h3 id="Rubrics-2"><a href="#Rubrics-2" class="headerlink" title="Rubrics"></a>Rubrics</h3><ul>
-<li>Task1:  2</li>
-<li>Task2:  6</li>
-<li>Task3:  9</li>
-<li>Task4:  10</li>
-<li>Task5:  5</li>
-<li>If your project is submitted late,  (-2 Points) for each late day</li>
-<li>If you committed or pushed to a wrong repository,  (-2 Points)</li>
-<li><strong>Total 25</strong></li>
-</ul>
-<h1 id="Image-Processing-Text-encryption"><a href="#Image-Processing-Text-encryption" class="headerlink" title="Image Processing: Text encryption"></a>Image Processing: Text encryption</h1><h2 id="2019-02-20"><a href="#2019-02-20" class="headerlink" title="2019.02.20"></a>2019.02.20</h2><h3 id="Tasks-2"><a href="#Tasks-2" class="headerlink" title="Tasks"></a>Tasks</h3><ul>
-<li>Implement text translation function<ul>
-<li>Input: a string</li>
-<li>Output: representation of the string using your “secret dictionary”</li>
-</ul>
-</li>
-<li>Implement text translation function<ul>
-<li>Input: representation of the string using your “secret dictionary”</li>
-<li>Output: human readable string</li>
-</ul>
-</li>
-<li>Implement text encryption function<ul>
-<li>Input: a string, an image</li>
-<li>Output: an encrypted image</li>
-</ul>
-</li>
-<li>Implement text decryption function<ul>
-<li>Input: An encrypted image</li>
-<li>Output: A string</li>
-</ul>
-</li>
-<li>Reasonable test cases</li>
-<li><strong>Note</strong> that you should put all these functions inside one single file named <code>text_encryption.py</code> under the directory <code>src\scripts\exercises\</code></li>
-</ul>
-<h3 id="Rubrics-3"><a href="#Rubrics-3" class="headerlink" title="Rubrics"></a>Rubrics</h3><ul>
-<li>Project completeness<ul>
-<li>Implement text translation function (3 Points)</li>
-<li>Implement text translation function (3 Points)</li>
-<li>Implement text encryption function (3 Points)</li>
-<li>Implement text decryption function (3 Points)</li>
-<li>Reasonable test cases (2 Points)</li>
-<li>Code styles and project structure (-1~1 Points)</li>
-</ul>
-</li>
-<li>If your project is submitted late,  (-2 Points) for each late day</li>
-<li>If you committed or pushed to a wrong repository,  (-2 Points)</li>
-</ul>
-<h1 id="Initial-Git-Setup"><a href="#Initial-Git-Setup" class="headerlink" title="Initial Git Setup"></a>Initial Git Setup</h1><h2 id="2019-02-18"><a href="#2019-02-18" class="headerlink" title="2019.02.18"></a>2019.02.18</h2><h3 id="Tasks-3"><a href="#Tasks-3" class="headerlink" title="Tasks"></a>Tasks</h3><ul>
-<li>Download the master project</li>
-<li>Edit <code>readme.md</code></li>
-<li>Commit <strong>AND</strong> push your changes to <strong>YOUR OWN PROJECT</strong></li>
-</ul>
-<h3 id="Rubrics-4"><a href="#Rubrics-4" class="headerlink" title="Rubrics"></a>Rubrics</h3><ul>
-<li>Correctly editing the <code>readme.md</code> file<ul>
-<li>5 points</li>
-</ul>
-</li>
-<li>Successfully commit and push your changes to <strong>YOUR OWN PROJECT</strong><ul>
-<li>5 points</li>
-</ul>
-</li>
-<li>If your project is submitted late, <code>-2</code> for each late day</li>
-<li>If you committed or pushed to a wrong repository, <code>-3</code></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Issues/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Start-to-use-Git" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Start-to-use-Git/">Start to use Git</a>
-    </h1>
-  
-
-        
-        <a href="/Start-to-use-Git/" class="archive-article-date">
-  	<time datetime="2019-02-18T02:50:16.656Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h1><h2 id="Git-Address"><a href="#Git-Address" class="headerlink" title="Git Address"></a>Git Address</h2><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://192.168.2.20:58000</span></span><br></pre></td></tr></table></figure>
-<h2 id="Toolkits-installation"><a href="#Toolkits-installation" class="headerlink" title="Toolkits installation"></a>Toolkits installation</h2><ul>
-<li>Please refer to the other <a href="https://askwitionary.github.io/git/">guide</a> to install essential tools if you haven’t done so</li>
-</ul>
-<h1 id="Initial-Check"><a href="#Initial-Check" class="headerlink" title="Initial Check"></a>Initial Check</h1><h2 id="Login-Credential-Check"><a href="#Login-Credential-Check" class="headerlink" title="Login Credential Check"></a>Login Credential Check</h2><ul>
-<li>Make sure you can log in to our <a href="http://192.168.2.20:58000/" target="_blank" rel="noopener">gitlab</a></li>
-<li>Your user name should be the pinyin of your full name</li>
-</ul>
-<h2 id="Existing-Project-Check"><a href="#Existing-Project-Check" class="headerlink" title="Existing Project Check"></a>Existing Project Check</h2><h3 id="Check-Your-Project"><a href="#Check-Your-Project" class="headerlink" title="Check Your Project"></a>Check Your Project</h3><ul>
-<li>After you log in, you should find at least one project named by your full name</li>
-<li>Please check the following and make sure everything is the way it should be<ul>
-<li>The project should now be empty</li>
-<li>Your role should be <code>Maintainer</code></li>
-<li>The project should only be seen by you and 3 supervisors</li>
-<li>The project’s permission should be marked as <code>Private</code> (With a little <code>lock</code> icon on the right)</li>
-<li>Your project should be under the group <code>2019DataAnalysis</code></li>
-</ul>
-</li>
-<li>If you see any of the above conditions not met, please contact me asap so that I can help you fix it</li>
-</ul>
-<h3 id="Check-the-Master-Project"><a href="#Check-the-Master-Project" class="headerlink" title="Check the Master Project"></a>Check the Master Project</h3><ul>
-<li>There should also be another project named <code>tutoring_master</code> that you can see </li>
-<li>Your role should be <code>Developer</code></li>
-<li>You should see a simple project already in there</li>
-<li><strong>Note:</strong><ul>
-<li>You should <strong>NEVER</strong> push or create merge requests in this project</li>
-<li>You should <strong>NOT</strong> make any changes in this project</li>
-</ul>
-</li>
-</ul>
-<h3 id="Some-Notes"><a href="#Some-Notes" class="headerlink" title="Some Notes"></a>Some Notes</h3><ul>
-<li>This is not best practice to maintain projects. However, due to the fact that we will be using Gitlab to evaluate your performance, some permission issues need to be enforced</li>
-</ul>
-<h1 id="Initial-Setup-and-Practice"><a href="#Initial-Setup-and-Practice" class="headerlink" title="Initial Setup and Practice"></a>Initial Setup and Practice</h1><h2 id="Download-the-Master-Project"><a href="#Download-the-Master-Project" class="headerlink" title="Download the Master Project"></a>Download the Master Project</h2><ul>
-<li>Navigate to the project <code>tutoring_master</code></li>
-<li>Look for the <code>download</code> button<ul>
-<li>It should be located on the top right of the page</li>
-<li>It looks like a cloud with a down arrow</li>
-</ul>
-</li>
-<li>Download the master project to your local machine</li>
-<li>Note that this will be the place you spend most of your time coding. Save it to somewhere convenient</li>
-</ul>
-<h2 id="Edit-readme-md"><a href="#Edit-readme-md" class="headerlink" title="Edit readme.md"></a>Edit <code>readme.md</code></h2><ul>
-<li><p>You can open the project folder using <code>Pycharm</code> now</p>
-</li>
-<li><p>You can also edit <code>readme.md</code> using <code>Typora</code> or any text editor you prefer</p>
-</li>
-<li><p>Now delete everything in the file and type in the following</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+ </span>Attention!</span><br><span class="line">My name is &lt;Your Name&gt;.</span><br><span class="line">I am <span class="strong">**awesome**</span>!</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Save and exit</p>
-</li>
-<li><p>Commit and push your project to <strong>YOUR OWN PROJECT</strong> (The project with your name) </p>
-</li>
-<li><p>You can refer to this <a href="https://askwitionary.github.io/git/#Version-Control-Synchronizing">guide</a></p>
-</li>
-<li><p>Note:</p>
-<ul>
-<li>Use <code>http</code> to pull or push your project</li>
-<li>Never ever commit or push to the master project</li>
-<li>Any commit or push to the master project will result in losing points</li>
-</ul>
-</li>
-</ul>
-<h1 id="Future-Gitlab-Usage"><a href="#Future-Gitlab-Usage" class="headerlink" title="Future Gitlab Usage"></a>Future Gitlab Usage</h1><ul>
-<li>From now on, you should <strong>NOT</strong> send me any code via Wechat or Email. You should always push your code to your own project so that we can track changes and timestamps</li>
-<li>You can find <code>issues</code> on the left panel inside your project<ul>
-<li>All future tasks will be assigned here with descriptions and deadline</li>
-<li>It is your responsibility to manage your issues</li>
-<li>I will not be picky on this in the first month. However, Starting from Mar. 20th I will evaluate your performance solely depending on what I can see on gitlab</li>
-</ul>
-</li>
-<li>You can create your own documentation for your project in <code>wiki</code> panel<ul>
-<li>Use <code>markdown</code> to write your wiki!</li>
-<li>You can also save your notes here for better management</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Start-to-use-Git/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Tasks_SQL" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Tasks_SQL/">Tasks——SQL</a>
-    </h1>
-  
-
-        
-        <a href="/Tasks_SQL/" class="archive-article-date">
-  	<time datetime="2019-01-29T06:23:03.565Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><br></p>
-<h1 id="准备活动"><a href="#准备活动" class="headerlink" title="准备活动"></a>准备活动</h1><ul>
-<li>碎碎念：软件尽量使用英文版</li>
-</ul>
-<h2 id="数据库交互软件"><a href="#数据库交互软件" class="headerlink" title="数据库交互软件"></a>数据库交互软件</h2><ul>
-<li><p>你可以使用任何一个数据库交互软件</p>
-<ul>
-<li>推荐使用<code>HeidiSQL</code></li>
-<li><p><a href="https://www.heidisql.com/download.php" target="_blank" rel="noopener">点这里</a> 选择<code>Installer, 32/64 bit combined</code></p>
-</li>
-<li><p>主流的还有很多别的，比如<code>Navicat</code>，<code>DBeaver</code></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h2><ul>
-<li>Server IP<ul>
-<li>192.168.2.175</li>
-</ul>
-</li>
-<li>Port<ul>
-<li>3306</li>
-</ul>
-</li>
-<li>Username<ul>
-<li>root</li>
-</ul>
-</li>
-<li>Password<ul>
-<li>root</li>
-</ul>
-</li>
-</ul>
-<h1 id="热身运动"><a href="#热身运动" class="headerlink" title="热身运动"></a>热身运动</h1><ul>
-<li><p>下载并安装<a href="https://www.netsarang.com/en/free-for-home-school/" target="_blank" rel="noopener">Xshell</a></p>
-<ul>
-<li>需要填表</li>
-<li>Xftp暂时用不到可以不要</li>
-</ul>
-</li>
-<li><p>从命令行连接到服务器</p>
-<ul>
-<li><p>打开<code>Xshell</code></p>
-</li>
-<li><p>如果没有自动弹出<code>New Session Properties</code>窗口，你可以在左上角<code>File</code>选项卡下面找到它，或者按默认快捷键<code>Alt</code>+<code>N</code></p>
-<ul>
-<li>填表，<code>Name</code>只是个代号，自己能区分就好</li>
-<li><code>Protocal</code>: <code>ssh</code></li>
-<li><code>Host</code>: <code>192.168.2.175</code></li>
-<li><code>Port Number</code>: <code>22</code></li>
-<li>其他无所谓</li>
-</ul>
-</li>
-<li><p>点击<code>Connect</code></p>
-</li>
-<li><p>会提示你输入用户名密码，目前用户名密码都是你们的名字首字母，如段凌霄则为<code>dlx</code></p>
-</li>
-<li><p>成功连接后请用以下命令重置密码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd &lt;username&gt;			<span class="comment"># 请用你自己的用户名替换username</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>连接服务器上的MySQL服务器</p>
-<ul>
-<li><p>参考<a href="https://askwitionary.github.io/mysql/#User-and-authentication-setup">这里</a>以root权限进入MySQL服务器并创建自己的用户名与密码</p>
-</li>
-<li><p>将刚才在准备活动数据库交互软件里创建的连接删掉，把用户名密码替换成你自己创建的用户名密码测试连接</p>
-</li>
-<li>如果连接成功，方可进入下一步</li>
-</ul>
-</li>
-</ul>
-<h1 id="伸展运动"><a href="#伸展运动" class="headerlink" title="伸展运动"></a>伸展运动</h1><p>双击左边的<code>mpp5</code>数据库，我们就连上了一个简单的数据库<code>mpp5</code>。让我们来搞一些事情</p>
-<ul>
-<li><p>查询<code>PATIENT_ID</code>为<code>110111197511084018</code>的所有条目</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询总数据条数</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询<code>PATIENT_ID</code>为<code>110111197511084018</code>的计数</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询<code>ANSWER</code>长度大于5的所有条目</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不重复地列出所有<code>QUESTIONNAIRE_ID</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不重复地列出所有<code>QUESTIONNAIRE_ID</code>以及其计数</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询每个<code>PATIENT_ID</code>各有多少条数据</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="全身运动"><a href="#全身运动" class="headerlink" title="全身运动"></a>全身运动</h1><ul>
-<li><p>查询<code>QUESTIONSET_ID</code>为1, 且<code>QUESTIONNAIRE_ID</code>为009008，且<code>QUESTION_ID</code>为1，且选项<code>OPTION_ID</code>为1的人中，性别为1和为2的数量各是多少</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Tasks_SQL/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ubuntu_related" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/ubuntu_related/">Ubuntu 18.04 Common</a>
-    </h1>
-  
-
-        
-        <a href="/ubuntu_related/" class="archive-article-date">
-  	<time datetime="2019-01-14T02:19:49.206Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="What-to-Do-after-a-Fresh-Installation"><a href="#What-to-Do-after-a-Fresh-Installation" class="headerlink" title="What to Do after a Fresh Installation"></a>What to Do after a Fresh Installation</h1><h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><h3 id="Update-source-list"><a href="#Update-source-list" class="headerlink" title="Update source.list"></a>Update <code>source.list</code></h3><ul>
-<li><p><code>Ctrl</code> + <code>Alt</code> + <code>T</code> to open up a terminal</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apt/</span><br><span class="line">sudo vi sources.list</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不太会用<code>vi</code>，但是提供一个最傻瓜的办法</p>
-<ul>
-<li>Move your cursor to the top of the file, press <code>I</code></li>
-<li>Press <code>Enter</code> 2 times</li>
-<li>Press <code>Esc</code></li>
-<li>Move your cursor to the top of the file and press <code>I</code> again</li>
-<li>Copy and Paste the following sources to your <code>sources.list</code> file</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Press <code>Esc</code></p>
-</li>
-<li><p>Enter <code>:wq</code></p>
-</li>
-</ul>
-<h3 id="Update-your-sources"><a href="#Update-your-sources" class="headerlink" title="Update your sources"></a>Update your sources</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
-<h3 id="Upgrade-your-system-Optional"><a href="#Upgrade-your-system-Optional" class="headerlink" title="Upgrade your system(Optional)"></a>Upgrade your system(Optional)</h3><ul>
-<li>Note that if you <strong>DO NOT</strong> wish to used the latest version of Ubuntu, <strong>do NOT do this!</strong></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
-<h3 id="Create-Templates"><a href="#Create-Templates" class="headerlink" title="Create Templates"></a>Create Templates</h3><ul>
-<li>Used to enable <code>Right Click -&gt; New File</code> functionality</li>
-<li>Go to <code>~/Templates/</code> or <code>home/&lt;YourUsername&gt;/Templates</code></li>
-<li>Add template files you need. Examples:<ul>
-<li><code>temp.docx</code></li>
-<li><code>temp.txt</code></li>
-<li><code>readme.md</code></li>
-<li><code>temp.xlsx</code></li>
-<li><code>temp.pptx</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="Install-essential-tools"><a href="#Install-essential-tools" class="headerlink" title="Install essential tools"></a>Install essential tools</h2><h3 id="System-Tools"><a href="#System-Tools" class="headerlink" title="System Tools"></a>System Tools</h3><ul>
-<li><p>Network configuration tools    </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install net-tools	<span class="comment"># This allows your to see your IP address and many other details</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Install <code>openssh-server</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server	<span class="comment"># This allows your computer to be connected via `ssh`</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>System Monitors    <code>htop</code> &amp; <code>iotop</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install htop	<span class="comment"># This allows your to see your system's CPU and Memory usage etc. by each process</span></span><br><span class="line">sudo apt-get install iotop	<span class="comment"># This allows your to see your system's Disk usage etc. by each process</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Nvidia video card driver</p>
-<ul>
-<li>Search for <code>drivers</code> in the search bar</li>
-<li>Open up <code>Software &amp; Updates</code></li>
-<li>Select <code>Additional Drivers</code></li>
-<li>Choose <code>Using NVIDIA driver metapackage from nvidia-driver-390(proprietary, tested)</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="Version-Control-Tools"><a href="#Version-Control-Tools" class="headerlink" title="Version Control Tools"></a>Version Control Tools</h3><ul>
-<li><p><code>Git</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git	<span class="comment"># This allows your to use git commands</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="LaTex-support"><a href="#LaTex-support" class="headerlink" title="LaTex support"></a>LaTex support</h3><ul>
-<li><p>You will need this if you want to get pretty printed math equations for your pretty documents</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install texlive-full	<span class="comment"># Note that this is kinda large, more than 4 gigs</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h3><ul>
-<li>mysql: Please refer to <a href="https://askwitionary.github.io/mysql/">Mysql Related</a></li>
-</ul>
-<h2 id="Install-your-favorite-softwares"><a href="#Install-your-favorite-softwares" class="headerlink" title="Install your favorite softwares"></a>Install your favorite softwares</h2><h3 id="A-Better-txt-Editor"><a href="#A-Better-txt-Editor" class="headerlink" title="A Better txt Editor"></a>A Better txt Editor</h3><ul>
-<li><p>Install <code>vim</code> for better command line experience</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vim	<span class="comment"># This will simply make your life easier</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>Install <a href="https://typora.io/#linux" target="_blank" rel="noopener">Typora</a> for easier .md file editting</li>
-</ul>
-<h3 id="IDEA-amp-Conda"><a href="#IDEA-amp-Conda" class="headerlink" title="IDEA &amp; Conda"></a>IDEA &amp; Conda</h3><ul>
-<li>Please refer to <a href="https://askwitionary.github.io/python_environment/">Setting up Your Coding Environment</a></li>
-<li>If you need <code>IntelliJ</code>, the process should be similar</li>
-</ul>
-<h3 id="Install-Sogou-Pinyin"><a href="#Install-Sogou-Pinyin" class="headerlink" title="Install Sogou Pinyin"></a>Install Sogou Pinyin</h3><ul>
-<li>Please refer to <a href="https://askwitionary.github.io/sogou/">Installing Sogou Pinyin for Ubuntu 18.04</a></li>
-</ul>
-<h3 id="Database-UI"><a href="#Database-UI" class="headerlink" title="Database UI"></a>Database UI</h3><ul>
-<li>Recommendation: <a href="https://dbeaver.io/" target="_blank" rel="noopener">DBeaver</a></li>
-</ul>
-<p><br></p>
-<h1 id="Everything-starts-from-basics"><a href="#Everything-starts-from-basics" class="headerlink" title="Everything starts from basics"></a>Everything starts from basics</h1><p>Now let’s cover some basic but very useful commands that you might need in your coding life. I will keep populating this section and hopefully one day we can use this as a dictionary to look up specific commands that has faded in our own human memory system.</p>
-<h2 id="Create-a-sudo-user"><a href="#Create-a-sudo-user" class="headerlink" title="Create a (sudo) user"></a>Create a (sudo) user</h2><ul>
-<li><p>Create a user (Needs root privileges)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser lduan</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Follow the steps and fill in your information <strong>(Not Important)</strong></p>
-</li>
-<li><p>Grant <em>sudo</em> privillege to <em>lduan</em></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo usermod -aG sudo lduan</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Create-ssh-keys-and-put-it-onto-the-server"><a href="#Create-ssh-keys-and-put-it-onto-the-server" class="headerlink" title="Create ssh keys and put it onto the server"></a>Create ssh keys and put it onto the server</h2><ul>
-<li><p>Creating your own ssh keys</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br><span class="line"><span class="comment"># And the follow the prompts, normally just keep everything as default.</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Pasting your key to server so that you do not need to enter password each time you login</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Copy your key and paste it to the following path on your server</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># if the file does not exist</span></span><br><span class="line">touch ~/.ssh/authorized_keys</span><br><span class="line"><span class="comment"># then</span></span><br><span class="line">vim ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Press <code>Esc</code> and <code>:wq</code> to save it</p>
-</li>
-</ul>
-<h2 id="Copying-files"><a href="#Copying-files" class="headerlink" title="Copying files"></a>Copying files</h2><ul>
-<li><p>Copying files locally</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp &lt;origin path&gt; &lt;destination path&gt;</span><br><span class="line"><span class="comment"># Possible modifiers</span></span><br><span class="line"><span class="comment"># -r regression, copy eveything under the directory</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Copying files using ssh</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scp &lt;username&gt;@&lt;IPaddress&gt;:&lt;path&gt; &lt;destination path&gt;</span><br><span class="line"><span class="comment"># Possible modifiers</span></span><br><span class="line"><span class="comment"># -r regression, copy eveything under the directory</span></span><br><span class="line"><span class="comment"># example: copying file to current directory</span></span><br><span class="line">scp -r md@192.168.164.139:/home/data/ .</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Checking-stats"><a href="#Checking-stats" class="headerlink" title="Checking stats"></a>Checking stats</h2><ul>
-<li><p>Checking disk stats</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsblk</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Checking file sizes</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">du -hs				/* Size of all file*/</span><br><span class="line">ls -sh &lt;filename&gt;	/* Size of all file*/</span><br><span class="line">ls -sh				/* Size of all file*/</span><br><span class="line">ls -l filename 		/* Size of the file*/</span><br><span class="line">ls -l *        		/* Size of All the files <span class="keyword">in</span> the current directory */</span><br><span class="line">ls -al *       		/* Size of All the files including hidden files <span class="keyword">in</span> the current directory */</span><br><span class="line">ls -al dir/    		/* Size of All the files including hidden files <span class="keyword">in</span> the <span class="string">'dir'</span> directory */</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Change-command-path-source"><a href="#Change-command-path-source" class="headerlink" title="Change command path source"></a>Change command path source</h2><ul>
-<li>Resolviing the case where pip and python do not match each other</li>
-</ul>
-<h1 id="Networks"><a href="#Networks" class="headerlink" title="Networks"></a>Networks</h1><h2 id="Setting-Proxy-for-apt"><a href="#Setting-Proxy-for-apt" class="headerlink" title="Setting Proxy for apt"></a>Setting <strong>Proxy</strong> for <code>apt</code></h2><ul>
-<li><p>Go to <code>/etc/apt/apt.conf.d/</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apt/apt.conf.d/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Check if a file named <code>proxy.conf</code> exists</p>
-</li>
-<li><p>Add/Edit the file as you wish</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Optional</span></span><br><span class="line">sudo touch proxy.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># Adding proxy configuration</span></span><br><span class="line">Acquire::http::Proxy <span class="string">"&lt;ProxyServerAddress&gt;:&lt;Port&gt;"</span>;</span><br><span class="line">Acquire::https::Proxy <span class="string">"&lt;ProxyServerAddress&gt;:&lt;Port&gt;"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># For instance: </span></span><br><span class="line">Acquire::http::Proxy <span class="string">"http://abc.com:61001"</span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Checking-speed-capability-suof-network-device"><a href="#Checking-speed-capability-suof-network-device" class="headerlink" title="Checking speed capability suof network device"></a>Checking speed capability suof network device</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /sys/class/net/enp4s0/speed</span><br></pre></td></tr></table></figure>
-<h1 id="Ubuntu-18-04-Desktop-gt-Server"><a href="#Ubuntu-18-04-Desktop-gt-Server" class="headerlink" title="Ubuntu 18.04 Desktop ==&gt; Server"></a>Ubuntu 18.04 Desktop ==&gt; Server</h1><ul>
-<li>Install Ubuntu 18.04 Desktop normally<ul>
-<li>Use default setup for everything, erase the whole disk to be safe</li>
-</ul>
-</li>
-<li>Restart the computer after the installation is complete</li>
-<li>Remove the installation USB drive</li>
-<li><p>Change Ubuntu apt sources to appropriate (fastest) ones</p>
-<ul>
-<li>Sources provided by Alibaba<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Update sources</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Install openssh-server</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Install net-tools</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install net-tools</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Edit network settings</p>
-<ul>
-<li>Check your current IP address <code>ifconfig</code></li>
-<li>Open wired Internet connection settings</li>
-<li>Go to IPv4</li>
-<li>Set IPv4 method to Manual</li>
-<li>Set IP address you got from the previous step</li>
-<li>Set Netmask to 255.255.255.1</li>
-<li>Set Gateway to XXX.XXX.XXX.1</li>
-<li>Restart web service</li>
-</ul>
-</li>
-</ul>
-<h1 id="Docker-Related"><a href="#Docker-Related" class="headerlink" title="Docker Related"></a>Docker Related</h1><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Remove-older-version"><a href="#Remove-older-version" class="headerlink" title="Remove older version"></a>Remove older version</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine docker.io</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Note that this only removes the programs. All the images, containers, volumes and networks under <code>/var/lib/docker/</code> are kept.</li>
-</ul>
-<h3 id="Setting-up-the-repository"><a href="#Setting-up-the-repository" class="headerlink" title="Setting up the repository"></a>Setting up the repository</h3><ul>
-<li><p>First update the <code>apt-get</code> package index</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Install packages to allow <code>apt-get</code> to use a repository over HTTPS</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    software-properties-common</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Then we can add Docker’s official GPG key</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Possible Problem: This Docker link is blocked by the GFW as of 2018.11.06. Try to use proxy if encountered with this problem.</strong></p>
-</li>
-<li><p>(Optional) Verify that you now have the key with the fingerprint <code>9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key fingerprint 0EBFCD88</span><br><span class="line"></span><br><span class="line">pub   4096R/0EBFCD88 2017-02-22</span><br><span class="line">      Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88</span><br><span class="line">uid                  Docker Release (CE deb) &lt;docker@docker.com&gt;</span><br><span class="line">sub   4096R/F273FCD8 2017-02-22</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Now we can set up the <strong>stable repository</strong>. Note that even if you need development, edge, or test repositories, you always need the stable one. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository \</span><br><span class="line">   <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">   <span class="variable">$(lsb_release -cs)</span> \</span></span><br><span class="line"><span class="string">   stable"</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Installing-Docker-CE"><a href="#Installing-Docker-CE" class="headerlink" title="Installing Docker CE"></a>Installing Docker CE</h3><ul>
-<li><p>Update the <code>apt</code> package index once again</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Install Docker-CE</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>(Optional) Verify your installation</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run hello-world</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Common-commands"><a href="#Common-commands" class="headerlink" title="Common commands"></a>Common commands</h2><p><br></p>
-<h3 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h3><p><br></p>
-<h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><p><br></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/ubuntu_related/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-TensorFlow" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/TensorFlow/">Tensorflow Related</a>
-    </h1>
-  
-
-        
-        <a href="/TensorFlow/" class="archive-article-date">
-  	<time datetime="2019-01-14T02:19:49.205Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h1><p>简单介绍一下TensorFlow（TF）以及其安装。以防以后的小朋友掉进坑里。</p>
-<h2 id="什么是TF"><a href="#什么是TF" class="headerlink" title="什么是TF"></a>什么是TF</h2><ul>
-<li>TF其实是个处理数学模型的包包。要理解Tensor可以从矩阵的角度出发。简单来说，矩阵是二维向量组成的方块，tensor是n维向量组成的“多维体”</li>
-<li>矩阵都属于Tensor，而Tensor不一定都是向量</li>
-<li>Flow顾名思义，就是流动，摇摆，TF就是对tensor这种数据结构进行快速处理的一套工具，让他们一起“摇摆”。<h2 id="为什么用TF"><a href="#为什么用TF" class="headerlink" title="为什么用TF"></a>为什么用TF</h2></li>
-<li>AI离不开机器学习，而机器学习离不开处理大量的数据。TF提供了一个可以大大提高运算效率的平台。没错，java和C++粉们估计要撇嘴了：你Python一个script language凭什么跟我们说运算效率？对，Python作为一个一行一行执行的语言确实很慢，但是TF之所以效率高和Python其实没有太大关系。我们在利用TF解决问题时，也并没有在用Python去做实际的运算。简单来说，我们只利用Python代码来告诉TF我们要解决的问题整体是什么样的（包括输入数据是什么，用什么模型，如果是DNN那么要用多少hidden layers等等等等）。等到我们把一个问题完完整整地描述完了，TF再把这一整个问题带去后台运算，最后给出一个结果。</li>
-<li>由于上述原因，Google的程序猿就开发了这个开源平台，很多别的程序猿也为这个平台做了很多贡献，做了许多机器学习的模型。我们可以直接拿来，或者做一定的修改之后使用。<h2 id="如何安装TF"><a href="#如何安装TF" class="headerlink" title="如何安装TF"></a>如何安装TF</h2></li>
-</ul>
-<p>之前写的时候对<code>Anaconda</code>了解还太少，没有完全利用。也可能那时候<code>Anaconda</code>对<code>TF</code>的支持还比较一般。总之从下面我们可以看到更全面使用<code>Anaconda</code>可以省去很多麻烦</p>
-<h3 id="Anaconda更换国内源"><a href="#Anaconda更换国内源" class="headerlink" title="Anaconda更换国内源"></a><code>Anaconda</code>更换国内源</h3><ul>
-<li><p>进入<code>conda prompt</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="TF-CPU版"><a href="#TF-CPU版" class="headerlink" title="TF-CPU版"></a>TF-CPU版</h3><ul>
-<li>CPU版的TF比较容易安装，可以参照下面被遗弃的<code>pip</code>方法或者在环境里使用<code>conda install</code>命令都可以</li>
-</ul>
-<h3 id="TF-GPU版"><a href="#TF-GPU版" class="headerlink" title="TF-GPU版"></a>TF-GPU版</h3><ul>
-<li><p>GPU版本曾经非常麻烦。因为不是说你安装上了就可以了，你还需要安装一些依赖，并让TF能找到这些依赖</p>
-</li>
-<li><p>官网也时不时给出各种更加方便的办法去避免很多麻烦，比如直接下载一个配置好的<code>docker</code>容器等</p>
-</li>
-<li><p>但是经过本人测试还是用<code>Anaconda</code>比较方便</p>
-</li>
-<li><p>言归正传，第一步当然是确保你的显卡符合标准，请参考<a href="https://developer.nvidia.com/cuda-gpus" target="_blank" rel="noopener">这里</a> </p>
-<ul>
-<li>到目前（2019年1月）要求显卡计算力评分在3.5分以上</li>
-<li>注意这个评分与你显卡的实际运算能力基本关系不大，主要还是大版本问题。TF应该对不同代的显卡有不同的支持。比如我用的一个老掉牙的<code>780M</code>显卡，虽然性能应该不比<code>940M</code>或者是<code>950M</code>差，但是评分上还是差很多。毕竟<code>780M</code>的时代应该还没有TF吧哈哈</li>
-</ul>
-</li>
-<li><p>安装必要依赖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev libfreeimage3 libfreeimage-dev</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下一步是安装显卡驱动。到目前（2019年1月）我下载的是410版本的。可以从<a href="https://www.nvidia.com/Download/index.aspx?lang=en-us" target="_blank" rel="noopener">官网</a>下载。</p>
-</li>
-<li><p>按住<code>Ctrl</code>+<code>Alt</code>+<code>F1</code>打开<code>tty mode</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 卸载干净已安装的NVIDIA驱动</span></span><br><span class="line">sudo apt-get remove --purge nvidia*</span><br><span class="line"><span class="comment"># 下面run文件名称换成你的</span></span><br><span class="line">sudo chmod 777 NVIDIA-Linux-x86_64-410.78.run</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>禁用<code>nouveau</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/modprobe.d/blacklist.conf</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在文件末尾增加下面两行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">blacklist nouveau</span><br><span class="line">options nouveau modeset=0</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>按<code>Esc</code>并输入<code>:wq</code>保存文件</p>
-</li>
-<li><p>执行下列命令使其生效并重启</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo update-initramfs -u</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>确认<code>nouveau</code>禁用成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep nouveau</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装驱动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./NVIDIA-Linux-x86_64-410.78.run -no-opengl-files -no-nouveau-check</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试确认已经安装好了</p>
-<ul>
-<li>Ubuntu用户安装完成之后可以直接在命令行输入<code>nvidia-smi</code>，如果可以看到驱动版本等信息则成功</li>
-</ul>
-</li>
-<li><p>再来就简单了。其他教程应该会各种告诉你要装<code>CUDA</code>和<code>CuDNN</code>什么的，这里现在已经完全不用了。你只需要在你的<code>conda</code>环境里面用<code>conda install tensorflow-gpu</code>命令就可以了。<code>Anaconda</code>会帮你安装这些依赖并放在合适的位置，非常方便</p>
-</li>
-</ul>
-<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.python.client <span class="keyword">import</span> device_lib</span><br><span class="line"></span><br><span class="line">device_lib.list_local_devices()</span><br></pre></td></tr></table></figure>
-<ul>
-<li>如果没有报错并且可以看到准确无误的GPU信息，则安装已成功</li>
-</ul>
-<h2 id="如何安装TF（过时遗弃）"><a href="#如何安装TF（过时遗弃）" class="headerlink" title="如何安装TF（过时遗弃）"></a><em><del>如何安装TF（过时遗弃）</del></em></h2><ul>
-<li><em><del>首先推荐使用Linux系统。TF对windows的支持还是更新得比较慢的。Google官方支持的模型比较有限，如果想使用GitHub上别的大神做好的模型的话，最安全的方法就是使用Linux系统。而且Linux系统在使用服务器进行运算的过程有很多便利。</del></em></li>
-<li><em><del>安装过程Windows和Linux差不多。由于有时候要使用非官方的模型，而新版本的TF可能会不支持GitHub大神几年前写的代码，所以我们就经常需要安装多个TF版本。要实现这个最好就是使用Anaconda创建虚拟环境。</del></em></li>
-<li><em><del><a href="https://www.anaconda.com/download/#windows" target="_blank" rel="noopener">点这里下载Anaconda</a>，下载完成后<a href="https://www.tensorflow.org/install/" target="_blank" rel="noopener">点开这里</a></del></em><h3 id="Windows用户请看这里："><a href="#Windows用户请看这里：" class="headerlink" title="Windows用户请看这里："></a><del>Windows用户请看这里：</del></h3></li>
-</ul>
-<ul>
-<li><p><em><del>安装完Anaconda后，请重启电脑。然后打开Anaconda Prompt，按照TF网上的教程“Installing with Anaconda”进行前三步</del></em></p>
-</li>
-<li><p><em><del>这时你应该已经在你刚刚创建的环境里了，这时不要输入官网给的命令，因为他们的服务器我们用起来很慢。CPU版本用这个：</del></em></p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ tensorflow</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><em><del>GPU版本用这个：</del></em></p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ tensorflow-gpu</span><br></pre></td></tr></table></figure>
-<ul>
-<li><em><del>如果需要安装不同的版本，则在上述链接后加上“==1.X.X”（你需要的版本号）</del></em></li>
-</ul>
-</li>
-<li><p><em><del>大功告成。建议同时安装pandas，处理数据很可能会用到。命令和上述一样，把最后的tensorflow改成pandas就行了</del></em></p>
-</li>
-<li><p><em><del>多啰嗦一句，’’’真的真的用Linux或者Mac吧。’’’Mac请自己排雷，Linux目前用来最舒服。如果你看这篇wiki已经过了很久，windows支持已经做得很好了，那么当我没说。</del></em></p>
-</li>
-</ul>
-<h3 id="Linux用户请看这里："><a href="#Linux用户请看这里：" class="headerlink" title="Linux用户请看这里："></a><del>Linux用户请看这里：</del></h3><ul>
-<li><em><del>Linux版本不是特别重要，别太低了就行。请在做任何事之前先把驱动啥的弄好。我用的是时下最新的Ubuntu 18.04</del></em></li>
-<li><em><del>同样下载安装Anaconda，（将conda加入到path）完成之后重启电脑。</del></em></li>
-<li><em><del>这时打开terminal，输入conda回车，应该不会报错了。</del></em></li>
-<li><em><del>‘’’cd到你想要安装环境的directory！！！’’’与Windows的Anaconda不同，Linux不会自动把环境装到Conda文件夹里。我没做这一步最后home目录下一堆隐藏文件夹乱七八糟的。不是强迫症的当我没说。</del></em><ul>
-<li><em><del>与windows不同， Linux不会自动给你选环境安装在哪里。而且安装环境的文件夹默认是隐藏的。需要显示隐藏文件才能看到。</del></em></li>
-</ul>
-</li>
-<li><em><del>跟着官网Ubuntu选项卡下面“Installing with Anaconda”安装。如果官网给的链接慢，也可以使用上述清华的镜像安装。</del></em></li>
-<li><em><del>别忘了安装pandas，大功告成！</del></em><ul>
-<li><em><del>安装完成之后，可以把官网给的“Hello World”的代码粘下来跑一跑，如果没有报错，就说明你已经安装成功TF并且打开了“新世界”的大门了</del></em><h2 id="如何使用TF"><a href="#如何使用TF" class="headerlink" title="如何使用TF"></a>如何使用TF</h2>这个比较需要分类讨论。以后慢慢说。<br>（未完待续）</li>
-</ul>
-</li>
-</ul>
-<h1 id="PyCharm-Remote-Intepreter"><a href="#PyCharm-Remote-Intepreter" class="headerlink" title="PyCharm Remote Intepreter"></a>PyCharm Remote Intepreter</h1><p>好了介绍了半天TF是什么以及如何使用，我们来讨论一个比较实际的问题。那就是不管我再怎么吹TF的效率高，在处理实际问题时，尤其在训练时，我们自己炫酷的超薄笔记本的配置还是会大大影响训练时间的。肿么办！<br>好在Pycharm可以使用远程Interpreter，这样我们就可以把我们的代码deploy到服务器上，然后用服务器肥硕的配置来跑我们的程序了。这样我们的炫酷小本其实就只是个文档编辑器加显示器了。<br>其实现在我就在使用TF的CNN模型跑一个图像识别的训练，本机CPU稳定在10%以下，网络使用几乎为0。在创建模型时完全不影响我做别的事情。而服务器那边忙得不亦乐乎：40个核开了82个任务，332个进程。<br>废话不多说，我们来说说干货。</p>
-<ul>
-<li><p>首先之前，请确认将Ubuntu apt-get的国内源添加进去</p>
-<ul>
-<li><p><a href="https://askwitionary.github.io/ubuntu_related/#Ubuntu-18-04-Desktop-gt-Server">请参考本文，源链接也在这里</a></p>
-</li>
-<li><p>打开terminal</p>
-</li>
-<li><p>安装文本编辑器，随便选<strong>一个</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install vim</span><br><span class="line">apt-get install vi</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>cd到存放源地址文件的目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改source.list文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim sources.list</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>按<code>a</code>进入<code>insert mode</code>， 找到光标到文件最前端，回车出两个个空行，然后将上述链接中的源链接复制到文件最前面。我用的是阿里源。复制好了之后按Esc建进入command mode，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:wq</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>写入并退出，大工告成</p>
-</li>
-</ul>
-</li>
-<li><p>首先你需要一个配置好的服务器。我这里的服务器上跑的是Ubuntu 16.04。今后会用18.04吧，改进还是很多的。相信支持很快能做好。服务器上需要安装ssh</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install sshd</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>我拿到这个服务器的时候这些基本的都已经装好了，我自己没有从头配置过。但是考虑到其实当时服务器也很干净，我猜测很多东西Ubuntu都自带了。</p>
-</li>
-<li><p>装好后在本地测试一下是不是能通过ssh链接到这个服务器：</p>
-<ul>
-<li>ssh root@<server ip=""></server></li>
-<li>这里先测试一下，能连上就可以了。正常使用推荐先创建一个用户,后面详细说</li>
-</ul>
-</li>
-<li><p>下一步在服务器是更新pip/pip3，准备安装需要的包包。这一步在root下就好，省事。</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pip</span><br><span class="line">pip3 install --upgrade pip</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>现在pip最新版本是18.装好了之后就要安装你需要的包包了，这里只拿tensorflow为例</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ tensorflow</span><br><span class="line">pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple/ tensorflow</span><br></pre></td></tr></table></figure>
-<ul>
-<li>这样默认安装最新版，需要以前版本的话请参照上文描述执行命令。</li>
-</ul>
-</li>
-<li><p>一切安装好后，下一步请创建一个新的用户，在root下输入</p>
-<ul>
-<li><code>adduser &lt;username&gt;</code></li>
-<li>跟着提示输入两遍密码。建议弄个短一点的，以后会经常输入</li>
-<li>然后系统会让你确认一下各种乱七八糟的信息，没问题的话跟系统确认一下，用户就创建好了</li>
-</ul>
-</li>
-<li><p>下一步就是在本地配置Pycharm了</p>
-<ul>
-<li>安装，打开Pycharm</li>
-<li><code>File -&gt; Settings -&gt; Project: &#39;&#39;&lt;YOUR_PROJECT_NAME&gt;&#39;&#39; -&gt; Project Interpreter</code></li>
-<li>找到右上的小齿轮按钮，点开，选择<code>add...</code></li>
-<li>在弹出的对话框选择<code>SSH Interpreter</code></li>
-<li>填写你服务器的IP地址，选择端口，填写刚才创建的用户名，点击下一步</li>
-<li>填写密码并勾选记住密码，下一步</li>
-<li>选择Interpreter，一般放在你用户文件夹的bin目录下，有时候系统会既有Python2还有Python3，建议点开旁边的<code>...</code>手动选择<br><code>/usr/bin/Python3.6</code></li>
-<li>选择Sync Folder，这个文件夹就是你本地的文件会被同步到服务器的什么文件夹，默认的是在root下的tmp。你也可以改到你自己的用户文件夹下。做一个负责任的人，请保管好你的代码，别弄得机器里哪都是 ：）</li>
-<li>勾选自动上传文件，选上方便点，其实也不是实时的。所以不建议使用远程服务器做测试。会很麻烦。</li>
-<li>点击完成，大功告成！现在Pycharm会自动扫描这个系统下已经安装的包包，确认你能找到我们刚才装的tensorflow和tensorboard，应该就没啥问题啦！</li>
-<li>依旧在Settings里，找到<code>Build, Execution, Deployment</code>，点小三角打开下拉菜单，点<code>Options</code></li>
-<li>找到<code>Create empty directories</code>，勾选，点击<code>Apply</code>，然后<code>OK</code></li>
-<li>如果Pycharm没有自动开始上传你的project，可以点击<code>Tools -&gt; Deployment -&gt; Upload to &lt;Your Server&gt;</code></li>
-<li>写个Hello World试试吧！记得刚刚更新的文件不会马上上传到服务器，新更新后要立即运行记得手动上传一次。</li>
-</ul>
-</li>
-</ul>
-<h1 id="关于Docker"><a href="#关于Docker" class="headerlink" title="关于Docker"></a>关于Docker</h1><p>大多数情况下，服务器要用来做很多事情，所以直接用服务器做自己的Interpreter还是很不科学的。万一不小心把服务器玩坏了，重装一下系统，别人的东西也跟着没了，别人一定会把你举高高再用小拳拳教你用Docker的。<br>使用Docker确实会增加些许麻烦，毕竟为了Docker本身的轻便，配置Docker的时候你需要告诉系统你都需要什么样的依赖包，这样Docker会为你利用各个包的镜像帮你创建一个容器。好处是这样你的程序就相当于机器的一个进程了，不会影响到别的程序。如果你的程序不小心嗝屁了，你可以直接把这个容器干掉，从而完全不会影响别的程序。<br>好啦，搞起来吧，首先安装Docker<br><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository" target="_blank" rel="noopener">教程点这里</a><br>具体的可以以后有机会详细说，这里现介绍一下常用的命令，Docker基本都需要sudo权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo docker ps		<span class="comment"># 查看所有正在运行的Docker列表</span></span><br><span class="line">sudo docker ps -a	<span class="comment"># 查看所有（包括已结束、退出、报错）的Docker列表</span></span><br><span class="line">sudo docker pull ubuntu:16.04	<span class="comment"># 下载镜像，例如ubuntu:16.04</span></span><br><span class="line">sudo docker build -t <span class="string">''</span>&lt;Your image tag&gt;<span class="string">''</span> .		<span class="comment"># 注意最后的空格点儿" ."</span></span><br><span class="line">sudo docker run -d -p &lt;port inside docker&gt;:&lt;server port&gt; &lt;image tag&gt;	<span class="comment"># # 这个例子是创建一个API服务的例子</span></span><br><span class="line">sudo docker run –it –p 8022:22 ubuntu:16.04		<span class="comment"># 这个例子是创建一个bin/bash命令行的例子</span></span><br></pre></td></tr></table></figure>
-<p>前面一个端口号是映射到容器的端口号，通过这个端口号进入容器；后面一个端口号是服务器的端口号，本地机器通过这个端口号进入服务器。把这两个端口号连在一起可以直接连入容器。</p>
-<p><a href="https://docs.docker.com/v17.12/edge/engine/reference/commandline/build/#use-a-dockerignore-file" target="_blank" rel="noopener">参见这里</a>    Docker ignore file</p>
-<p><a href="https://docs.docker.com/v17.12/edge/engine/reference/commandline/run/" target="_blank" rel="noopener">参见这里</a>    Docker run</p>
-<p>参考：</p>
-<ul>
-<li><a href="https://zhuanlan.zhihu.com/p/27114995" target="_blank" rel="noopener">Docker深度学习环境篇第二弹：PyCharm + Docker + GPUs</a></li>
-<li><a href="http://www.pinchofintelligence.com/faster-writing-and-testing-machine-learning-applications/" target="_blank" rel="noopener">Faster writing and testing machine learning applications.</a></li>
-<li><a href="https://medium.com/@furkanpur/remote-python-debug-to-docker-container-over-ssh-by-using-pycharm-44a9b6e82206" target="_blank" rel="noopener">Remote Python Debug to Docker Container over Ssh by using PyCharm</a></li>
-<li><a href="https://www.tuicool.com/articles/feUJZbI" target="_blank" rel="noopener">PyCharm远程调试Tensorflow</a></li>
-<li><a href="http://www.sohu.com/a/129277803_465975" target="_blank" rel="noopener">一步步从零开始：使用PyCharm和SSH搭建远程TensorFlow开发环境</a></li>
-<li><a href="https://www.jetbrains.com/help/pycharm/using-docker-as-a-remote-interpreter.html" target="_blank" rel="noopener">Docker: Using Docker as a Remote Interpreter</a></li>
-<li><a href="https://www.rhoboro.com/2017/01/21/pycharm-docker.html" target="_blank" rel="noopener">PyCharmでの開発でDockerを使う</a></li>
-<li><a href="https://medium.com/@erikhallstrm/work-remotely-with-pycharm-tensorflow-and-ssh-c60564be862d" target="_blank" rel="noopener">Work remotely with PyCharm, TensorFlow and SSH</a></li>
-</ul>
-<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><ul>
-<li>不同版本镜像：<a href="https://hub.docker.com/r/tensorflow/tensorflow/tags/" target="_blank" rel="noopener">https://hub.docker.com/r/tensorflow/tensorflow/tags/</a></li>
-</ul>
-<h1 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
-<li><a href="https://www.tensorflow.org/install/install_linux?hl=zh-cn#InstallingDocker" target="_blank" rel="noopener">在 Ubuntu 上安装 TensorFlow</a><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2></li>
-<li><a href="https://towardsdatascience.com/a-beginner-introduction-to-tensorflow-part-1-6d139e038278" target="_blank" rel="noopener">A beginner introduction to TensorFlow (Part-1)</a></li>
-<li><a href="https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0" target="_blank" rel="noopener">Simple Reinforcement Learning with Tensorflow Part 0: Q-Learning with Tables and Neural Networks</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/TensorFlow/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Tasks_DT" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Tasks_DT/">Tasks——DT</a>
-    </h1>
-  
-
-        
-        <a href="/Tasks_DT/" class="archive-article-date">
-  	<time datetime="2019-01-14T02:19:49.204Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><br></p>
-<h1 id="写在前面的"><a href="#写在前面的" class="headerlink" title="写在前面的"></a>写在前面的</h1><ul>
-<li><strong>学英语、算法以及代码都是一个缓慢的过程。如果任何时候你感觉时间不够，节奏不对，或者身体不适，虎躯一震，我们可以放慢脚步。但是请千万不要糊弄，耽误大家的时间和精力</strong><ul>
-<li>10个小时的活只有好好干10个小时才能获得10分收获</li>
-<li>10个小时的活急急忙忙干3个小时，保证转天就忘</li>
-<li>做强逻辑性的活儿千万不要死背，死记任何东西。尽量去理解，去梳理逻辑，自然而然就记住了。我们最后的目的不是点亮技能说我会多少多少种模型算法，而是遇到一个实际问题你能想到几个可能可以用的模型，并且知道其基本逻辑以及应该去哪里找相关的文献</li>
-</ul>
-</li>
-<li><strong>如果需要帮助在下能帮得上的肯定知无不言，千万不要羞涩</strong></li>
-<li><strong>如果有任何typo，语法错误请不吝赐教，我会尽快更正 ：）</strong></li>
-</ul>
-<p><br></p>
-<h1 id="Task-0-Setting-up-your-coding-environment"><a href="#Task-0-Setting-up-your-coding-environment" class="headerlink" title="Task 0: Setting up your coding environment"></a>Task 0: Setting up your coding environment</h1><p>If you haven’t already done so, please refer to <a href="https://askwitionary.github.io/python_environment/">this post</a>. And check if you have done the same. Make sure you have a separate new environment each time you develop a project</p>
-<h1 id="Task-1-Basic-data-cleanup"><a href="#Task-1-Basic-data-cleanup" class="headerlink" title="Task 1: Basic data cleanup"></a>Task 1: Basic data cleanup</h1><p>Dec. 11th 2018</p>
-<p>那我们就直接上手吧~这有个<a href="https://askwitionary.github.io/Getting-to-know-UCI-database-and-other-popular-on-line-database/">网上开放数据库</a>的介绍。你们可以去看看，然后就用里面提到的那个数据库，下载下来，写一个方法。</p>
-<h2 id="Making-data-machine-readable"><a href="#Making-data-machine-readable" class="headerlink" title="Making data machine readable"></a>Making data machine readable</h2><ul>
-<li><p>Input: crx.data file</p>
-</li>
-<li><p>Output: A <strong>2-D list</strong></p>
-<ul>
-<li><p>It should look like </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>output</span><br><span class="line">[[data_0], [data_1], [data_2], ...]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Individual data example</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>data_[<span class="number">0</span>]</span><br><span class="line">[<span class="string">'b'</span>, <span class="number">30.83</span>, <span class="number">0</span>, <span class="string">'u'</span>, <span class="string">'g'</span>, <span class="string">'w'</span>, <span class="string">'v'</span>, <span class="number">1.25</span>, <span class="string">'t'</span>, <span class="string">'t'</span>, <span class="string">'01'</span>, <span class="string">'f'</span>, <span class="string">'g'</span>, <span class="string">'00202'</span>, <span class="number">0</span>, <span class="string">'+'</span>]</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Mind the data types. Do not make all of them string. </p>
-</li>
-<li><p>For now we will use pure python. We will try to improve our code when we are handling larger scale of data.</p>
-</li>
-</ul>
-<h2 id="Skim-through-other-datasets"><a href="#Skim-through-other-datasets" class="headerlink" title="Skim through other datasets"></a>Skim through other datasets</h2><p>The task above should be relatively simple. If you should have more time, you can go deeper into the dataset website. Try to look for interesting data and compare differences of datasets that are by default used for different purposes, i.e., regression, classification and so on. </p>
-<p>多看看别的数据，比较一下常用于分类、回归等问题的数据有什么样的区别。</p>
-<h1 id="Task-2-Implementing-helper-functions"><a href="#Task-2-Implementing-helper-functions" class="headerlink" title="Task 2: Implementing helper functions"></a>Task 2: Implementing helper functions</h1><p>Dec. 18th 2018</p>
-<h2 id="Before-you-do-anything"><a href="#Before-you-do-anything" class="headerlink" title="Before you do anything"></a>Before you do anything</h2><p>It is important for you to at least have a rough idea of what kind of data you are dealing with. For instance, if you have read through all the files in the data folder and the description on the website, you should at least know that: </p>
-<ul>
-<li>This dataset consists of 690 credit card applicants’ personal information and whether or not they are approved for the credit card. </li>
-<li>Each data entry has 15 attributes, and data types of each attribute are on the website<ul>
-<li>we see that A2, A3, A8, A11, A14, A15 are continuous (number)</li>
-<li>All others are categorical (choices)</li>
-</ul>
-</li>
-<li>37 cases (5%) have one or more missing values</li>
-<li>This dataset has 2 classes, positive and negative, meaning approved and declined</li>
-</ul>
-<p>If you haven’t already read through all these information, <strong>go back and try to capture and understand your dataset first</strong></p>
-<p>Here is the link: </p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https://archive.ics.uci.edu/ml/datasets/Credit+Approval</span></span><br></pre></td></tr></table></figure>
-<h2 id="Back-to-the-point"><a href="#Back-to-the-point" class="headerlink" title="Back to  the point"></a>Back to  the point</h2><h3 id="Where-we-are"><a href="#Where-we-are" class="headerlink" title="Where we are"></a>Where we are</h3><ul>
-<li><p>We now know one mathematical model: <strong>decision tree (DT)</strong></p>
-<ul>
-<li>DT is a <strong>supervised</strong> learning method, thus we need labeled data</li>
-<li>It is one process only thus it is not good for giant datasets</li>
-<li>It is pretty good on small and clean datasets</li>
-</ul>
-</li>
-<li><p>We have a cleaned dataset: UCI credit approval data set</p>
-<ul>
-<li>690 data entries, relatively small dataset</li>
-<li>15 attributes, pretty tiny to be honest</li>
-<li>missing value is only 5%</li>
-<li>2 class data</li>
-</ul>
-</li>
-<li>By looking at these two, we know DT should work well for our dataset</li>
-</ul>
-<h3 id="What-I-will-provide"><a href="#What-I-will-provide" class="headerlink" title="What I will provide"></a>What I will provide</h3><ul>
-<li>I will provide a skeleton project this time, with detailed docstring stating what your input and output should be</li>
-<li>I will also provide a printer function to print your tree at the end</li>
-</ul>
-<h3 id="What-you-need-to-do"><a href="#What-you-need-to-do" class="headerlink" title="What you need to do"></a>What you need to do</h3><ul>
-<li><p><strong>Comment on lines in any one of the following circumstances:</strong></p>
-<ul>
-<li><strong>It took you more than 3 minutes to think</strong></li>
-<li><strong>You have to seek help on the Internet or from somebody else</strong></li>
-<li><strong>You are feeling brilliant</strong></li>
-<li><strong>You’ve got a bug that is not caused by a typo</strong></li>
-</ul>
-</li>
-<li><p><strong>在下列情景下请务必动动小手，写好注释。注释请麻烦高亮显示，救救孩子们的眼睛吧！</strong></p>
-<ul>
-<li><strong>某一步骤花费了你超过3分钟去思考</strong></li>
-<li><strong>你不得不找度娘和谷哥寻求帮助</strong></li>
-<li><strong>你感觉你写了几行吊炸天的代码，简直聪明至极</strong></li>
-<li><strong>测试的时候出现了bug，而且不是因为你不小心打错了这种原因</strong></li>
-</ul>
-</li>
-<li><p>I assume you have already finished your Task 1</p>
-<ul>
-<li>Copy and paste your code to function <code>readfile(file_name)</code> under the comment <code># Your code here</code>. </li>
-<li>Make sure your input and output matches how I descirbed in the docstring</li>
-<li>Make a minor improvement to handle missing data, in this case let’s use string <code>&quot;missing&quot;</code> to represent missing data. Note that it is given as <code>&quot;?&quot;</code></li>
-</ul>
-</li>
-<li><p>Implement <code>is_missing(value)</code>,  <code>class_counts(rows)</code>,  <code>is_numeric(value)</code> as directed in the docstring</p>
-</li>
-<li><p>Implement class <code>Determine</code>. This object represents a <strong>node</strong> of our DT. 这个对象表示的是决策树的节点。</p>
-<ul>
-<li>It has 2 inputs and a function. 有两个输入，一个方法</li>
-<li>We can think of it as the <strong>Question</strong> we are asking at each node. 可以理解成决策树中每个节点我们所提出的“问题”</li>
-<li>Recall the questions we asked in the play/not play dataset<ul>
-<li>Is it Sunny, overcast, or rainy?</li>
-<li>Is it hot, mild or cold?</li>
-<li>Is the wind strong or weak?</li>
-<li>etc.</li>
-</ul>
-</li>
-<li>为了更好地解释，我们参照下面这一组数据</li>
-</ul>
-<p>| name | gender | age  | internet | income | label |<br>| :–: | :—-: | :–: | :——: | :—-: | :—: |<br>| 大壮 |   M    |  34  |   1.3    |  23k   |   -   |<br>| 二花 |   F    |  28  |   2.6    |  17k   |   +   |<br>| 三胖 |   M    |  22  |   6.7    |   7k   |   +   |<br>| 四妞 |   F    |  17  |   5.9    |   1k   |   -   |</p>
-<ul>
-<li><p>这是随便编的一个网络营销广告效果的数据，我们有四个用户，两男两女，以及他们的年龄，每天上网时间，收入以及是否购买了我们营销的产品</p>
-</li>
-<li><p>For each possible column and value, we can have:</p>
-<ul>
-<li><p>Column: 3, Value: 4 means we are looking at column 3 and the threshhold value is 4. </p>
-</li>
-<li><p>If now we run the <code>match(self, example)</code> method, such as:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj = Determine(<span class="number">3</span>, <span class="number">4</span>)	<span class="comment"># Question is about column 3 and the threshold is 4</span></span><br><span class="line">row = [<span class="string">"三胖"</span>, <span class="string">"M"</span>, <span class="number">22</span>, <span class="number">6.7</span>, <span class="string">"7k"</span>, <span class="string">"+"</span>]</span><br><span class="line">obj.match(row)			<span class="comment"># Is row[3] greater than the threshold?</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>If the question is categorical, such as:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj = Determine(<span class="number">1</span>, <span class="string">'F'</span>)	<span class="comment"># Question is about column 1 and the threshold is 'F'</span></span><br><span class="line">row = [<span class="string">"三胖"</span>, <span class="string">"M"</span>, <span class="number">22</span>, <span class="number">6.7</span>, <span class="string">"7k"</span>, <span class="string">"+"</span>]</span><br><span class="line">obj.match(row)			<span class="comment"># Is row[1] same as the threshold?</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p><code>__init__</code> is already given</p>
-</li>
-<li><p>Please implement the method <code>match</code></p>
-<ul>
-<li>Be careful for missing data</li>
-<li>Make sure to check input data type. It should be at least 2 cases (numeric and categorical/string)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Implement the method <code>partition(rows, question)</code>as described in the docstring</p>
-<ul>
-<li>Use Determine class to partition data into 2 groups</li>
-</ul>
-</li>
-<li><p>Implement the method <code>gini(rows)</code> as described in the docstring</p>
-<ul>
-<li>Here is the formula for Gini impurity: <a href="https://www.codecogs.com/eqnedit.php?latex=\mathit{Gini}&space;=&space;1&space;-&space;\sum_{i=1}^{n}p_i^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathit{Gini}&space;=&space;1&space;-&space;\sum_{i=1}^{n}p_i^2" title="\mathit{Gini} = 1 - \sum_{i=1}^{n}p_i^2"></a><ul>
-<li>where <code>n</code> is the number of classes</li>
-<li><a href="https://www.codecogs.com/eqnedit.php?latex=p_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_i" title="p_i"></a> is the percentage of the given class <code>i</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Implement the method <code>info_gain(left, right, current_uncertainty)</code> as described in the docstring</p>
-<ul>
-<li>Here is the formula for Information Gain: <a href="https://www.codecogs.com/eqnedit.php?latex=IG&space;=&space;U_0&space;-&space;p_l&space;\cdot&space;G_l&space;-&space;p_r&space;\cdot&space;G_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?IG&space;=&space;U_0&space;-&space;p_l&space;\cdot&space;G_l&space;-&space;p_r&space;\cdot&space;G_r" title="IG = U_0 - p_l \cdot G_l - p_r \cdot G_r"></a> <ul>
-<li>where <a href="https://www.codecogs.com/eqnedit.php?latex=p_r&space;=&space;1-p_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_r&space;=&space;1-p_l" title="p_r = 1-p_l"></a> </li>
-<li><a href="https://www.codecogs.com/eqnedit.php?latex=U_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?U_0" title="U_0"></a> is current_uncertainty</li>
-<li><a href="https://www.codecogs.com/eqnedit.php?latex=p_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_l" title="p_l"></a> is the percentage/probability of left branch, same story for <a href="https://www.codecogs.com/eqnedit.php?latex=p_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_r" title="p_r"></a> </li>
-<li><a href="https://www.codecogs.com/eqnedit.php?latex=G_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_l" title="G_l"></a> is the Gini impurity we mentioned above for the left branch. Same story for <a href="https://www.codecogs.com/eqnedit.php?latex=G_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_r" title="G_r"></a> </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Happy-Coding"><a href="#Happy-Coding" class="headerlink" title="Happy Coding :)"></a>Happy Coding :)</h3><h1 id="Task-3"><a href="#Task-3" class="headerlink" title="Task 3"></a>Task 3</h1><p>Dec. 24th 2018    Merry Christmas</p>
-<ul>
-<li>Implement <code>find_best_split(rows)</code>. This is the core of our DT algorithm. We need to find the best “question” to be asked. Please follow the steps below and comment on all the lines you feel necessary. <ul>
-<li>Initialize all variables. You may need to store the best information gain, the best Determine object and more</li>
-<li>Loop through all the columns</li>
-<li>Find all possible values of each column. Note that we do <strong>NOT</strong> want duplicate values here</li>
-<li>Loop through each value you have found in the previous step</li>
-<li>Define a new <code>Determine</code> object with the current column and value</li>
-<li>Find and store <code>true_rows</code> and <code>false_rows</code> with <code>partition</code> function</li>
-<li>Examine if your rows got any split. i.e. if any of the <code>true_rows</code> and <code>false_rows</code> has length 0. <ul>
-<li>If yes, do nothing and continue executing your loop</li>
-<li>If not, calculate information gain with the method you have implemented in Task 2</li>
-</ul>
-</li>
-<li>Check if the value you’ve got is better</li>
-<li>After all the loop, return the best information gain and the best Determine object associated with the best information gain</li>
-</ul>
-</li>
-<li>Implement the class <code>Leaf</code><ul>
-<li>This object represents a decision node when it has reached to a leaf node</li>
-<li>You either cannot split any more, or the prediction is already certain (100%)</li>
-<li>Implement <code>__init__(self, rows)</code>. You just need to tell us what <code>self.prediction</code> is</li>
-<li>Our prediction now is simply based on which labels lie in this leaf and how many data entries for each label are there in this leaf. Say we have 3 data entries all fall into this leaf, as follows,<ul>
-<li>data_0: bla bla bla +</li>
-<li>data_1: bla bla bla -</li>
-<li>data_2: bla bla bla +</li>
-</ul>
-</li>
-<li>Then whenever we have a testing data that falls into this leaf, we know that there is approximately 66.67% chance it is a “+” and 33.33% chance it is a “-“</li>
-<li>Recall that we have implemented a function called <code>class_counts(rows)</code> which might be useful</li>
-</ul>
-</li>
-<li>Implement the class <code>DecisionNode</code><ul>
-<li><code>DecisionNode</code> has 3 inputs</li>
-<li>We will need to compare different <code>DecisionNode</code> objects. We define a method <code>__eq__()</code> to allow <code>==</code> to be used<ul>
-<li>We compare if all three attributes of <code>self</code> and <code>other</code> are the same and return a <strong>boolean</strong>(True/False)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Implement the function <code>build_tree(rows)</code>. This is the function we use to actually build our tree. Please follow the steps below,<ul>
-<li>We will be using recursive function here (递归函数)</li>
-<li>Find the best split using the method we implemented before, store information gain and the question to a local variable</li>
-<li>Define the ending condition. If there is no gain, i.e. <code>gain == 0</code>, return a leaf node <code>Leaf(rows)</code></li>
-<li>Otherwise, get the partition of the tree at the current node with the best question(<code>Determine</code> object that we got before)</li>
-<li>We use <strong>DFS(Depth First Search)</strong> to build the tree, and do the true_branch <strong>recursively</strong> first.</li>
-<li>We then split the false_branch <strong>recursively</strong></li>
-<li>At last, we need to return something. We will return a <code>DecisionNode</code> object here since the starting point is also a <code>DecisionNode</code></li>
-<li>Notes:<ul>
-<li>This function might take you some time and thinking. Be patient</li>
-<li>You need to understand the logic behind our DT before you even start to think. Talk to me if you are not feeling confident enough</li>
-<li>Look up <strong>recursive function</strong> and <strong>depth first search</strong> if necessary. </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>I will implement <code>print_tree</code>. You don’t need to worry about it at all</li>
-<li><p>Implement the method <code>classify(row, node)</code>. This is the method we use to predict our testing/validation/real dataset. Follow the steps below</p>
-<ul>
-<li>First define ending scenario. If we have reached a <code>leaf node</code>, return the <code>prediction</code></li>
-<li>If input is not a leaf node, then it should be a <code>DecisionNode</code>. </li>
-<li>Use the <code>match</code> function we defined before to determine whether it will be classified to the true_branch or the false_branch</li>
-<li>recursively return <code>classify(row, node.&lt;branch&gt;)</code> while if the previous step gives you a <code>True</code>, you use the true_branch for <code>&lt;branch&gt;</code> ; and if the previous step gives you a <code>False</code>, you use the false_branch for <code>&lt;branch&gt;</code> </li>
-</ul>
-</li>
-<li><p>I will provide all the code you need for <code>print_leaf(counts)</code></p>
-</li>
-<li>Happy coding!</li>
-</ul>
-<h1 id="Task-4"><a href="#Task-4" class="headerlink" title="Task 4"></a>Task 4</h1><p>Dec. 31st 2018    Happy New Year!</p>
-<p>Now we have all the tools we need for our decision tree. It’s time for us to use it to do some magic!</p>
-<h2 id="Data-Splitting"><a href="#Data-Splitting" class="headerlink" title="Data Splitting"></a>Data Splitting</h2><ul>
-<li>We first split our data into 2 sets, training set and testing set</li>
-<li>You can first just use the first 85% of data as training data and the remaining as testing data</li>
-<li>You will need to try to make them random selected</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fraction = <span class="number">0.15</span>					<span class="comment"># 15% of data will be used as testing set</span></span><br><span class="line">data = 							<span class="comment"># Please complete this line to read data from file</span></span><br><span class="line">training_data = 				<span class="comment"># Please complete this line to extract training set</span></span><br><span class="line">testing_data = 					<span class="comment"># Please complete this line to extract testing set</span></span><br></pre></td></tr></table></figure>
-<h2 id="Making-our-tree-readable"><a href="#Making-our-tree-readable" class="headerlink" title="Making our tree readable"></a>Making our tree readable</h2><ul>
-<li>Now we define column labels. Note that this is only used for printing your tree</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Column labels.</span></span><br><span class="line"><span class="comment"># These are used only to print the tree.</span></span><br><span class="line">header = []</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(len(testing_data[<span class="number">0</span>])):</span><br><span class="line">	header.append(<span class="string">'Attribute&#123;&#125;'</span>.format(_))</span><br></pre></td></tr></table></figure>
-<h2 id="Building-our-tree"><a href="#Building-our-tree" class="headerlink" title="Building our tree"></a>Building our tree</h2><ul>
-<li>OK, we are good to build our tree using our training data</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my_very_first_decision_tree = 	<span class="comment"># Please complete this line to build your tree</span></span><br></pre></td></tr></table></figure>
-<h2 id="Calculating-accuracy-of-our-tree-with-testing-data"><a href="#Calculating-accuracy-of-our-tree-with-testing-data" class="headerlink" title="Calculating accuracy of our tree with testing data"></a>Calculating accuracy of our tree with testing data</h2><ul>
-<li>Now we have our tree ready. It’s time to test how our tree works</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">corr = <span class="number">0</span>						<span class="comment"># Used to store how many correct prediction we will get</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> testing_data:		<span class="comment"># Loop through all testing data</span></span><br><span class="line">    actual = 					<span class="comment"># Store the actual label, which should be the last column</span></span><br><span class="line">    <span class="comment"># Get all possibilities predicted by our tree with the given testing data</span></span><br><span class="line">    possibilities = print_leaf(classify(row, my_very_first_decision_tree))</span><br><span class="line">    <span class="comment"># You can print out the possibilities and see what they look like</span></span><br><span class="line">    <span class="comment"># Now loop through all possibilities and get the prediction with the highest possibility</span></span><br><span class="line">    <span class="keyword">for</span> case <span class="keyword">in</span> possibilities:</span><br><span class="line">        <span class="comment"># Your code here</span></span><br><span class="line">        predictioin = <span class="keyword">None</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="comment"># Now test if our prediction is the same as the actual output</span></span><br><span class="line">    <span class="keyword">if</span>  ==	:					<span class="comment"># Please complete this line</span></span><br><span class="line">    	<span class="comment"># Your code here</span></span><br><span class="line">        <span class="keyword">pass</span>					<span class="comment"># If our prediction is correct, add 1 to corr</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># Print out the wrong predictions</span></span><br><span class="line">        <span class="comment"># Replace the Nones with correct variables</span></span><br><span class="line">        <span class="comment"># We need the actual label, predicted label, and the probability of the prediction, in that order</span></span><br><span class="line">        print(<span class="string">"Actual: &#123;&#125; === Predicted: &#123;&#125; === Prob: &#123;&#125;"</span>,format(<span class="keyword">None</span>, <span class="keyword">None</span>, <span class="keyword">None</span>))</span><br></pre></td></tr></table></figure>
-<h2 id="Overall-accuracy"><a href="#Overall-accuracy" class="headerlink" title="Overall accuracy"></a>Overall accuracy</h2><ul>
-<li>Finally, we need to see the overall accuracy of our model</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Replace the None with calculated overall accuracy</span></span><br><span class="line">print(<span class="string">"Overall Accuracy: &#123;&#125;%"</span>.format(<span class="keyword">None</span>))</span><br></pre></td></tr></table></figure>
-<h1 id="Task-5"><a href="#Task-5" class="headerlink" title="Task 5"></a>Task 5</h1><h2 id="Reflections-and-future-work"><a href="#Reflections-and-future-work" class="headerlink" title="Reflections and future work"></a>Reflections and future work</h2><ul>
-<li>How did it go? How is your model accuracy?</li>
-<li>运行得怎么样？（耗时、内存/CPU使用）最后模型的准确率怎么样？</li>
-<li>Try using random selected testing data and training data. Do you see significant difference in accuracy?</li>
-<li>试试用<strong>随机抽取的</strong>85%的数据做训练，剩下的15%的数据做测试，看看模型准确率有没有明显变化？</li>
-<li>Try to use at least 2 other datasets from UCI database to see how decision tree works for them. Do you see any similarities in the datasets that perform well?</li>
-<li>尝试从UCI数据库中选择至少两个别的数据，并用决策树对其训练并分析效率与准确率。你能总结出什么？决策树效果好的数据有什么特点？</li>
-<li>Try to implement the very basic random forest using our decision tree model as the baseline model</li>
-<li>调用我们的决策树模型，尝试开发一个最基本的随机森林模型，</li>
-<li>Future reading and presentation: </li>
-<li>延展阅读学习以及<strong>演讲</strong><ul>
-<li>Takeaways from this project</li>
-<li>这个项目中学到了什么</li>
-<li>Issues of decision tree</li>
-<li>决策树的问题</li>
-<li>Possible techniques to resolve these issues</li>
-<li>可能的解决办法</li>
-<li>What kind of problems are best suited for decision trees?</li>
-<li>什么样的问题最适合决策树</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
-<li><p>Developers, G. (2017, September 13). Let’s Write a Decision Tree Classifier from Scratch - Machine Learning Recipes #8. Retrieved from <a href="https://www.youtube.com/watch?v=LDRbO9a6XPU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=LDRbO9a6XPU</a></p>
-</li>
-<li><p>Chiharu, S. (1992, March 19). [Japanese Credit Screening (examples &amp; domain theory)]. Published raw data.</p>
-</li>
-<li></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Tasks_DT/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-spacy" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/spacy/">Spacy</a>
-    </h1>
-  
-
-        
-        <a href="/spacy/" class="archive-article-date">
-  	<time datetime="2019-01-14T02:19:49.203Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Pip-install-spaCy"><a href="#Pip-install-spaCy" class="headerlink" title="Pip install spaCy"></a>Pip install spaCy</h1><h2 id="Installing-with-Tsinghua-source"><a href="#Installing-with-Tsinghua-source" class="headerlink" title="Installing with Tsinghua source"></a>Installing with Tsinghua source</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ spacy</span><br></pre></td></tr></table></figure>
-<h2 id="Check-gcc-version"><a href="#Check-gcc-version" class="headerlink" title="Check gcc version"></a>Check gcc version</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc</span><br></pre></td></tr></table></figure>
-<h2 id="If-gcc-version-is-not-6-install-gcc-6-and-g-6"><a href="#If-gcc-version-is-not-6-install-gcc-6-and-g-6" class="headerlink" title="If gcc version is not 6, install gcc-6 and g++-6"></a>If gcc version is not 6, install <code>gcc-6</code> and <code>g++-6</code></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gcc-6 g++-6</span><br></pre></td></tr></table></figure>
-<h2 id="Project-gcc-to-gcc-6"><a href="#Project-gcc-to-gcc-6" class="headerlink" title="Project gcc to gcc-6"></a>Project gcc to gcc-6</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/bin/gcc-6 /usr/<span class="built_in">local</span>/cuda/bin/gcc </span><br><span class="line">sudo ln -s /usr/bin/g++-6 /usr/<span class="built_in">local</span>/cuda/bin/g++</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/spacy/">Show All >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "https://askwitionary.github.io/re/", 
+    sourceId: "re",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+  
+
+  
+
   
 
 
@@ -2159,8 +690,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
