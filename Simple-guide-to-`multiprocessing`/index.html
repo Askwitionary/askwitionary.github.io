@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://askwitionary.github.io">
-  <title>Regular Expression | A Simple Tech Blog</title>
+  <title>Simple guide to `multiprocessing` | A Simple Tech Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="READ ME FIRST以下内容都是整理来的。只是希望能给你一个正则表达式的基本概念。正则表达式在文本处理方面有着基本却非常重要的应用。尤其对于像中文这种没有明确分词的语言，使用正则表达式不仅可以准确地找到具有相应特征的文本，还要比循环遍历要快得多。 首先推荐一个在线测试正则表达式的网站。点这里  复制一段文本在TESTING STRING栏里 在REGULAR EXPRESSION栏输入你想要">
+  <meta name="description" content="Import multiprocessing library. It is a standard library so you don’t need to install anything  1import multiprocessing as mp  Define a worker function to do your dirty work with proper parameters  1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Regular Expression">
-<meta property="og:url" content="https://askwitionary.github.io/re/index.html">
+<meta property="og:title" content="Simple guide to `multiprocessing`">
+<meta property="og:url" content="https://askwitionary.github.io/Simple-guide-to-`multiprocessing`/index.html">
 <meta property="og:site_name" content="A Simple Tech Blog">
-<meta property="og:description" content="READ ME FIRST以下内容都是整理来的。只是希望能给你一个正则表达式的基本概念。正则表达式在文本处理方面有着基本却非常重要的应用。尤其对于像中文这种没有明确分词的语言，使用正则表达式不仅可以准确地找到具有相应特征的文本，还要比循环遍历要快得多。 首先推荐一个在线测试正则表达式的网站。点这里  复制一段文本在TESTING STRING栏里 在REGULAR EXPRESSION栏输入你想要">
+<meta property="og:description" content="Import multiprocessing library. It is a standard library so you don’t need to install anything  1import multiprocessing as mp  Define a worker function to do your dirty work with proper parameters  1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-14T06:20:45.824Z">
+<meta property="og:updated_time" content="2019-03-25T09:02:57.870Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Regular Expression">
-<meta name="twitter:description" content="READ ME FIRST以下内容都是整理来的。只是希望能给你一个正则表达式的基本概念。正则表达式在文本处理方面有着基本却非常重要的应用。尤其对于像中文这种没有明确分词的语言，使用正则表达式不仅可以准确地找到具有相应特征的文本，还要比循环遍历要快得多。 首先推荐一个在线测试正则表达式的网站。点这里  复制一段文本在TESTING STRING栏里 在REGULAR EXPRESSION栏输入你想要">
+<meta name="twitter:title" content="Simple guide to `multiprocessing`">
+<meta name="twitter:description" content="Import multiprocessing library. It is a standard library so you don’t need to install anything  1import multiprocessing as mp  Define a worker function to do your dirty work with proper parameters  1">
   
     <link rel="alternative" href="/atom.xml" title="A Simple Tech Blog" type="application/atom+xml">
   
@@ -184,329 +184,41 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-re" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-Simple-guide-to-`multiprocessing`" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Regular Expression
+      Simple guide to `multiprocessing`
     </h1>
   
 
         
-        <a href="/re/" class="archive-article-date">
-  	<time datetime="2019-03-14T06:07:09.160Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-14</time>
+        <a href="/Simple-guide-to-`multiprocessing`/" class="archive-article-date">
+  	<time datetime="2019-03-25T09:02:57.867Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="READ-ME-FIRST"><a href="#READ-ME-FIRST" class="headerlink" title="READ ME FIRST"></a>READ ME FIRST</h2><p>以下内容都是整理来的。只是希望能给你一个正则表达式的基本概念。正则表达式在文本处理方面有着基本却非常重要的应用。尤其对于像中文这种没有明确分词的语言，使用正则表达式不仅可以准确地找到具有相应特征的文本，还要比循环遍历要快得多。</p>
-<p>首先推荐一个在线测试正则表达式的网站。<a href="https://regex101.com/" target="_blank" rel="noopener">点这里</a></p>
-<ul>
-<li>复制一段文本在<code>TESTING STRING</code>栏里</li>
-<li>在<code>REGULAR EXPRESSION</code>栏输入你想要测试的正则表达式</li>
-<li>右上方的<code>EXPLANATION</code>会给你解释你输入的正则表达式的<strong>字面逻辑</strong>，用于方便分析你的正则表达式效率</li>
-<li>右侧中间的<code>MATCH INFORMATION</code>会告诉你匹配你所给的规则的字符串位置</li>
-<li>右下方是方便你检索正则表达式规则的字典</li>
+        <ul>
+<li>Import <code>multiprocessing</code> library. It is a standard library so you don’t need to install anything</li>
 </ul>
-<p>略读过以下文章后，你可以找一段文本进行测试。如果我们以后会对问卷数据进行分析，我们会常常用到正则表达式的。如果我们有任意别的形式的<strong>文本</strong>数据需要进行分析，也一定要记得正则表达式是你的好丽友</p>
-<h2 id="什么是正则表达式"><a href="#什么是正则表达式" class="headerlink" title="什么是正则表达式"></a>什么是正则表达式</h2><p>正则表达式是一种用来描述一定数量文本的语言表达方法，Regex代表Regular Expression。</p>
-<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>一個正则表达式通常被稱為一個<em>模式（pattern）</em>，為用来描述或者匹配一系列符合某个句法规则的字符串。例如：<em>Handel</em>、<em>Händel</em>和<em>Haendel</em>這三个字符串，都可以由「<code>H(a|ä|ae)ndel</code>」这个模式来描述。大部分正则表达式的形式都有如下的结构：</p>
-<p>选择<br><strong>|</strong>竖直分隔符代表选择。例如「<code>gray|grey</code>」可以匹配grey或gray。</p>
-<!-- -->
-<p>数量限定<br>某个字符后的数量限定符用来限定前面这个字符允许出现的个数。最常见的数量限定符包括“<strong>+</strong>”、“<strong>?</strong>”和“<strong>*</strong>”（不加数量限定则代表出现一次且仅出现一次）：</p>
-<!-- -->
-<p><strong>+</strong>加号代表前面的字符必须至少出现一次。（1次、或多次）。例如，「<code>goo+gle</code>」可以匹配<em>google</em>、<em>gooogle</em>、<em>goooogle</em>等;</p>
-<!-- -->
-<p><strong>?</strong>问号代表前面的字符最多-{}-只可以出现一次。（0次、或1次）。例如，「<code>colou?r</code>」可以匹配<em>color</em>或者<em>colour</em>;</p>
-<!-- -->
-<p><strong>*</strong>星号代表前面的字符可以不出现，也可以出现一次或者多次。（0次、或1次、或多次）。例如，「<code>0*42</code>」可以匹配<em>42</em>、<em>042</em>、<em>0042</em>、<em>00042</em>等。</p>
-<!-- -->
-<p>匹配<br>圆括号可以用来定义操作符的范围和优先度。例如，「<code>gr(a|e)y</code>」等价于「<code>gray|grey</code>」，「<code>(grand)?father</code>」匹配<em>father</em>和<em>grandfather</em>。</p>
-<p>上述这些构造子都可以自由组合，因此，「<code>H(ae?|ä)ndel</code>」和「<code>H(a|ae|ä)ndel</code>」是相同的。</p>
-<h2 id="正则表达式全集"><a href="#正则表达式全集" class="headerlink" title="正则表达式全集"></a>正则表达式全集</h2><p>摘自<a href="https://zh.wikipedia.org/wiki/正则表达式" target="_blank" rel="noopener">1</a></p>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\</td>
-<td>将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，「<code>n</code>」匹配字符「<code>n</code>」。「<code>\n</code>」匹配一个换行符。序列「<code>\\</code>」匹配「<code>\</code>」而「<code>\(</code>」则匹配「<code>(</code>」。</td>
-</tr>
-<tr>
-<td>^</td>
-<td>匹配输入字符串的开始位置。如果设置了RegExp对象的Multiline属性，^也匹配「<code>\n</code>」或「<code>\r</code>」之后的位置。</td>
-</tr>
-<tr>
-<td>$</td>
-<td>匹配输入字符串的结束位置。如果设置了RegExp对象的Multiline属性，$也匹配「<code>\n</code>」或「<code>\r</code>」之前的位置。</td>
-</tr>
-<tr>
-<td>-</td>
-<td>匹配前面的子表达式零次或多次。例如，zo*能匹配「<code>z</code>」、「<code>zo</code>」以及「<code>zoo</code>」。*等价于{0,}。</td>
-</tr>
-<tr>
-<td>+</td>
-<td>匹配前面的子表达式一次或多次。例如，「<code>zo+</code>」能匹配「<code>zo</code>」以及「<code>zoo</code>」，但不能匹配「<code>z</code>」。+等价于{1,}。</td>
-</tr>
-<tr>
-<td>?</td>
-<td>匹配前面的子表达式零次或一次。例如，「<code>do(es)?</code>」可以匹配「<code>do</code>」或「<code>does</code>」中的「<code>do</code>」。?等价于{0,1}。</td>
-</tr>
-<tr>
-<td>{<span style="font-family:Times New Roman; font-style:italic;">n</span>}</td>
-<td><span style="font-family:Times New Roman; font-style:italic;">n</span>是一个非负整数。匹配确定的<span style="font-family:Times New Roman; font-style:italic;">n</span>次。例如，「<code>o{2}</code>」不能匹配「<code>Bob</code>」中的「<code>o</code>」，但是能匹配「<code>food</code>」中的两个o。</td>
-</tr>
-<tr>
-<td>{<span style="font-family:Times New Roman; font-style:italic;">n</span>,}</td>
-<td><span style="font-family:Times New Roman; font-style:italic;">n</span>是一个非负整数。至少匹配<span style="font-family:Times New Roman; font-style:italic;">n</span>次。例如，「<code>o{2,}</code>」不能匹配「<code>Bob</code>」中的「<code>o</code>」，但能匹配「<code>foooood</code>」中的所有o。「<code>o{1,}</code>」等价于「<code>o+</code>」。「<code>o{0,}</code>」则等价于「<code>o*</code>」。</td>
-</tr>
-<tr>
-<td>{<span style="font-family:Times New Roman; font-style:italic;">n</span>,<span style="font-family:Times New Roman; font-style:italic;">m</span>}</td>
-<td><span style="font-family:Times New Roman; font-style:italic;">m</span>和<span style="font-family:Times New Roman; font-style:italic;">n</span>均为非负整数，其中<span style="font-family:Times New Roman; font-style:italic;">n&lt;/span&gt;&lt;=<span style="font-family:Times New Roman; font-style:italic;">m</span>。最少匹配<span style="font-family:Times New Roman; font-style:italic;">n</span>次且最多匹配<span style="font-family:Times New Roman; font-style:italic;">m</span>次。例如，「<code>o{1,3}</code>」将匹配「<code>fooooood</code>」中的前三个o。「<code>o{0,1}</code>」等价于「<code>o?</code>」。请注意在逗号和两个数之间不能有空格。</span></td>
-</tr>
-<tr>
-<td>?</td>
-<td>当该字符紧跟在任何一个其他限制符（*,+,?，{<span style="font-family:Times New Roman; font-style:italic;">n</span>}，{<span style="font-family:Times New Roman; font-style:italic;">n</span>,}，{<span style="font-family:Times New Roman; font-style:italic;">n</span>,<span style="font-family:Times New Roman; font-style:italic;">m</span>}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串「<code>oooo</code>」，「<code>o+?</code>」将匹配单个「<code>o</code>」，而「<code>o+</code>」将匹配所有「<code>o</code>」。</td>
-</tr>
-<tr>
-<td>.</td>
-<td>匹配除「<code>\n</code>」之外的任何单个字符。要匹配包括「<code>\n</code>」在内的任何字符，请使用像「`(.</td>
-<td>\n)`」的模式。</td>
-</tr>
-<tr>
-<td>(pattern)</td>
-<td>匹配pattern并获取这一匹配的子字符串。该子字符串用于向后引用。所获取的匹配可以从产生的Matches集合得到，在VBScript中使用SubMatches集合，在JScript中则使用$0…$9属性。要匹配圆括號字符，请使用「<code>\(</code>」或「<code>\)</code>」。</td>
-</tr>
-<tr>
-<td>(?:pattern)</td>
-<td>匹配pattern但不获取匹配的子字符串，也就是说这是一个非获取匹配，不存储匹配的子字符串用于向后引用。这在使用或字符「`(</td>
-<td>)<code>」来组合一个模式的各个部分是很有用。例如「</code>industr(?:y</td>
-<td>ies)<code>」就是一个比「</code>industry</td>
-<td>industries`」更简略的表达式。</td>
-</tr>
-<tr>
-<td>(?=pattern)</td>
-<td>正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如，「`Windows(?=95</td>
-<td>98</td>
-<td>NT</td>
-<td>2000)<code>」能匹配「</code>Windows2000<code>」中的「</code>Windows<code>」，但不能匹配「</code>Windows3.1<code>」中的「</code>Windows`」。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。</td>
-</tr>
-<tr>
-<td>(?!pattern)</td>
-<td>正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如「`Windows(?!95</td>
-<td>98</td>
-<td>NT</td>
-<td>2000)<code>」能匹配「</code>Windows3.1<code>」中的「</code>Windows<code>」，但不能匹配「</code>Windows2000<code>」中的「</code>Windows`」。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始</td>
-</tr>
-<tr>
-<td>(?&lt;=pattern)</td>
-<td>反向肯定预查，与正向肯定预查类似，只是方向相反。例如，「`(?&lt;=95</td>
-<td>98</td>
-<td>NT</td>
-<td>2000)Windows<code>」能匹配「</code>2000Windows<code>」中的「</code>Windows<code>」，但不能匹配「</code>3.1Windows<code>」中的「</code>Windows`」。</td>
-</tr>
-<tr>
-<td>(?&lt;!pattern)</td>
-<td>反向否定预查，与正向否定预查类似，只是方向相反。例如「`(?&lt;!95</td>
-<td>98</td>
-<td>NT</td>
-<td>2000)Windows<code>」能匹配「</code>3.1Windows<code>」中的「</code>Windows<code>」，但不能匹配「</code>2000Windows<code>」中的「</code>Windows`」。</td>
-</tr>
-<tr>
-<td>x</td>
-<td>y</td>
-<td>匹配x或y。例如，「`z</td>
-<td>food<code>」能匹配「</code>z<code>」或「</code>food<code>」。「</code>(?:z</td>
-<td>f)ood<code>」则匹配「</code>zood<code>」或「</code>food`」。</td>
-</tr>
-<tr>
-<td>[xyz]</td>
-<td>字符集合（character class）。匹配所包含的任意一个字符。例如，「<code>[abc]</code>」可以匹配「<code>plain</code>」中的「<code>a</code>」。特殊字符仅有反斜线\保持特殊含义，用于转义字符。其它特殊字符如星号、加号、各种括号等均作为普通字符。脱字符^如果出现在首位则表示负值字符集合；如果出现在字符串中间就仅作为普通字符。连字符 - 如果出现在字符串中间表示字符范围描述；如果如果出现在首位则仅作为普通字符。</td>
-</tr>
-<tr>
-<td>[^xyz]</td>
-<td>排除型（negate）字符集合。匹配未列出的任意字符。例如，「<code>[^abc]</code>」可以匹配「<code>plain</code>」中的「<code>plin</code>」。</td>
-</tr>
-<tr>
-<td>[a-z]</td>
-<td>字符范围。匹配指定范围内的任意字符。例如，「<code>[a-z]</code>」可以匹配「<code>a</code>」到「<code>z</code>」范围内的任意小写字母字符。</td>
-</tr>
-<tr>
-<td>[^a-z]</td>
-<td>排除型的字符范围。匹配任何不在指定范围内的任意字符。例如，「<code>[^a-z]</code>」可以匹配任何不在「<code>a</code>」到「<code>z</code>」范围内的任意字符。</td>
-</tr>
-<tr>
-<td>\b</td>
-<td>匹配一个单词边界，也就是指单词和空格间的位置。例如，「<code>er\b</code>」可以匹配「<code>never</code>」中的「<code>er</code>」，但不能匹配「<code>verb</code>」中的「<code>er</code>」。</td>
-</tr>
-<tr>
-<td>\B</td>
-<td>匹配非单词边界。「<code>er\B</code>」能匹配「<code>verb</code>」中的「<code>er</code>」，但不能匹配「<code>never</code>」中的「<code>er</code>」。</td>
-</tr>
-<tr>
-<td>\cx</td>
-<td>匹配由x指明的控制字符。例如，\cM匹配一个Control-M或回车符。x的值必须为A-Z或a-z之一。否则，将c视为一个原义的「<code>c</code>」字符。</td>
-</tr>
-<tr>
-<td>\d</td>
-<td>匹配一个数字字符。等价于[0-9]。</td>
-</tr>
-<tr>
-<td>\D</td>
-<td>匹配一个非数字字符。等价于[^0-9]。</td>
-</tr>
-<tr>
-<td>\f</td>
-<td>匹配一个换页符。等价于\x0c和\cL。</td>
-</tr>
-<tr>
-<td>\n</td>
-<td>匹配一个换行符。等价于\x0a和\cJ。</td>
-</tr>
-<tr>
-<td>\r</td>
-<td>匹配一个回车符。等价于\x0d和\cM。</td>
-</tr>
-<tr>
-<td>\s</td>
-<td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于[ \f\n\r\t\v]。</td>
-</tr>
-<tr>
-<td>\S</td>
-<td>匹配任何非空白字符。等价于[^ \f\n\r\t\v]。</td>
-</tr>
-<tr>
-<td>\t</td>
-<td>匹配一个制表符。等价于\x09和\cI。</td>
-</tr>
-<tr>
-<td>\v</td>
-<td>匹配一个垂直制表符。等价于\x0b和\cK。</td>
-</tr>
-<tr>
-<td>\w</td>
-<td>匹配包括下划线的任何单词字符。等价于「<code>[A-Za-z0-9_]</code>」。</td>
-</tr>
-<tr>
-<td>\W</td>
-<td>匹配任何非单词字符。等价于「<code>[^A-Za-z0-9_]</code>」。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="常用片段"><a href="#常用片段" class="headerlink" title="常用片段"></a>常用片段</h2><table>
-<thead>
-<tr>
-<th>片段</th>
-<th>说明</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.+</td>
-<td>匹配任意长度字符串</td>
-<td></td>
-</tr>
-<tr>
-<td>\d+</td>
-<td>匹配任意长度数字</td>
-<td>012324</td>
-</tr>
-<tr>
-<td>[\W\w\d]+</td>
-<td>匹配任意长度英文+数字</td>
-<td>w034AZ334</td>
-</tr>
-<tr>
-<td>[\u4E00-\u9FA5]+</td>
-<td>匹配任意长度中文</td>
-<td></td>
-</tr>
-<tr>
-<td>[\w\d-\.]+@[\w\d-]+\.[\w\d]+</td>
-<td>匹配邮箱</td>
-</tr>
-</tbody>
-</table>
-<h3 id="肯定预查"><a href="#肯定预查" class="headerlink" title="肯定预查"></a>肯定预查</h3><p>灵活使用 <strong>(?&lt;=<em>pattern</em>)</strong> 和 <strong>(?=<em>pattern</em>)</strong> 可实现精确匹配，示例：</p>
-<table>
-<thead>
-<tr>
-<th>原始文本</th>
-<th>匹配目标</th>
-<th>正则表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&lt;font class=”skcolor_ljg”&gt;葡萄酒&lt;/font&gt; 2014 750ml&lt;/em&gt;</td>
-<td><strong>葡萄酒</strong></td>
-<td>(?&lt;=&lt;font class=”skcolor_ljg”&gt;).+?(?=&lt;/font&gt; 2014 750ml&lt;/em&gt;)</td>
-</tr>
-<tr>
-<td>href=”//item.jd.com/1865339.html”</td>
-<td><strong>1865339</strong></td>
-<td>(?&lt;=href=”//item.jd.com/)\d+(?=.html”)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="T命名捕获组"><a href="#T命名捕获组" class="headerlink" title="T命名捕获组"></a>T命名捕获组</h3><p>当原始内容中包含多个重复文本片段，可使用T命名捕获组进行匹配，系统会自动将T命名捕获组解析内容识别为最终结果</p>
-<p><code>(</code><em><code>pattern</code></em><code>)(?</code><t><em><code>pattern</code></em><code>)(</code><em><code>pattern</code></em><code>)</code></t></p>
-<p>示例：</p>
-<table>
-<thead>
-<tr>
-<th>原始文本</th>
-<th>匹配目标</th>
-<th>正则表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&lt;tr&gt;&lt;td&gt;2231&lt;/td&gt;&lt;td&gt;Beijing&lt;/td&gt;&lt;td&gt;测试&lt;/td&gt;&lt;/tr&gt;</td>
-<td><strong>Beijing</strong></td>
-<td>&lt;tr&gt;&lt;td&gt;.+?&lt;/td&gt;&lt;td&gt;(?&lt;T&gt;.+?)&lt;/td&gt;&lt;td&gt;.+?&lt;/td&gt;&lt;/tr&gt;</td>
-</tr>
-</tbody>
-</table>
-<p>注明：此方法较为麻烦</p>
-<h2 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h2><table>
-<thead>
-<tr>
-<th>模式</th>
-<th>前缀</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>单行模式</td>
-<td>(?s)</td>
-<td>更改 <strong>.</strong> 的含义，使之可以匹配换行符 <strong>\n</strong>，即可实现对内容的跨行匹配</td>
-</tr>
-<tr>
-<td>不区分大小写模式</td>
-<td>(?i)</td>
-<td></td>
-</tr>
-<tr>
-<td>多行模式</td>
-<td>(?m)</td>
-<td>表示更改 <strong>^</strong> 和 <strong>$</strong> 的含义，使它们分别在任意一行的行首和行尾匹配，而不仅仅在整个字符串的开头和结尾匹配。           </td>
-</tr>
-</tbody>
-</table>
-<pre><code>在此模式下，**$** 匹配 **\\n** 之前的位置以及字符串结束前的位置。**^** 匹配 &apos;&apos;&apos;\\n &apos;&apos;&apos;之后的位置以及字符串开始的位置。  |
-</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> multiprocessing <span class="keyword">as</span> mp</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Define a <code>worker</code> function to do your dirty work with proper parameters</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">worker</span><span class="params">(ind, start, end)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    定义一个“工人”方法，随便让它做一点复杂的事情</span></span><br><span class="line"><span class="string">    :param ind: 进程序号</span></span><br><span class="line"><span class="string">    :param start: 开始节点</span></span><br><span class="line"><span class="string">    :param end: 结束节点</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 告知我们已经开始了第一个进程</span></span><br><span class="line">    print(<span class="string">"=========================Process &#123;&#125; has started at index &#123;&#125;========================="</span>.format(ind, start))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 随便定义一组长度为1000的数据</span></span><br><span class="line">    data = [<span class="string">"abc"</span>] * <span class="number">1000</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 耗时（又无用）的一个循环</span></span><br><span class="line">    <span class="comment"># 根据你电脑的配置可以更改下面的参数，虽然CPU很耐操但是万一烧了概不负责 :)</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(ind * <span class="number">10000</span>):</span><br><span class="line">        data_chunk = data[start:end].append(<span class="string">"123"</span>)</span><br><span class="line">        _ = data_chunk</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 循环结束，工作结束，告知该进程完工并结束该进程</span></span><br><span class="line">    print(<span class="string">"                             ----------------------                               "</span>)</span><br><span class="line">    print(<span class="string">"=========================Process &#123;&#125; has ended at index &#123;&#125;========================="</span>.format(ind, end))</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Codes to initialize multiprocessing tasks<ul>
+<li>Note that if you are using <code>Windows</code>, You MUST wrap all your code into functions. In other words, your testing codes must be under <code>if __name__ == &quot;__main__:&quot;</code> clause</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 初始化一个Manager对象</span></span><br><span class="line">    manager = mp.Manager()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义数据并找到其长度</span></span><br><span class="line">    data = [<span class="string">"abc"</span>] * <span class="number">1000</span></span><br><span class="line">    num = len(data)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义进程数，并由进程数与数据量算出每一块数据的数量</span></span><br><span class="line">    process_num = <span class="number">16</span></span><br><span class="line">    inputs = []</span><br><span class="line">    chunk = int(num / process_num)</span><br><span class="line">    start_ind = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 预配置所有worker方法的输入</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(process_num):</span><br><span class="line">        inputs.append((start_ind, start_ind + chunk))</span><br><span class="line">        start_ind += chunk + <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 定义一个计数器以及存放进程的数组</span></span><br><span class="line">    counter = <span class="number">0</span></span><br><span class="line">    processes = []</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 定义这些进程并存入数组</span></span><br><span class="line">    <span class="keyword">for</span> input1, input2 <span class="keyword">in</span> inputs:</span><br><span class="line">        <span class="comment"># 定义mp.Process对象，target为目标方法，args为输入参数（tuple），注意args tuple末尾的逗号</span></span><br><span class="line">        processes.append(mp.Process(target=worker, args=(counter, input1, input2,)))</span><br><span class="line">        counter += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 运行所有进程</span></span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> processes:</span><br><span class="line">        p.start()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 确定所有进程结束</span></span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> processes:</span><br><span class="line">        p.join()</span><br></pre></td></tr></table></figure>
       
 
       
@@ -595,7 +307,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://askwitionary.github.io/re/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://askwitionary.github.io/Simple-guide-to-`multiprocessing`/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -609,18 +321,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/Simple-guide-to-`multiprocessing`/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Simple guide to `multiprocessing`
-        
-      </div>
-    </a>
   
-  
-    <a href="/Announcement/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Announcement</div>
+    <a href="/re/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Regular Expression</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -647,7 +350,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#READ-ME-FIRST"><span class="toc-number">1.</span> <span class="toc-text">READ ME FIRST</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是正则表达式"><span class="toc-number">2.</span> <span class="toc-text">什么是正则表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本语法"><span class="toc-number">3.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式全集"><span class="toc-number">4.</span> <span class="toc-text">正则表达式全集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用片段"><span class="toc-number">5.</span> <span class="toc-text">常用片段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#肯定预查"><span class="toc-number">5.1.</span> <span class="toc-text">肯定预查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T命名捕获组"><span class="toc-number">5.2.</span> <span class="toc-text">T命名捕获组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匹配模式"><span class="toc-number">6.</span> <span class="toc-text">匹配模式</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -664,8 +367,8 @@ var _hmt = _hmt || [];
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "https://askwitionary.github.io/re/", 
-    sourceId: "re",
+    url: "https://askwitionary.github.io/Simple-guide-to-`multiprocessing`/", 
+    sourceId: "Simple-guide-to-`multiprocessing`",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
