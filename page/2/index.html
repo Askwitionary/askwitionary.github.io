@@ -69,6 +69,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/Announcement">Announcement</a></li>
 	        
+				<li><a href="/Tasks_KMeans">Tasks_KMeans</a></li>
+	        
 				<li><a href="/Tasks_DT/">Tasks_DT</a></li>
 	        
 				<li><a href="/Tasks_SQL/">Tasks_SQL</a></li>
@@ -137,6 +139,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -159,13 +163,15 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">Homepage</a></li>
+					<li style="width: 20%"><a href="/">Homepage</a></li>
 		        
-					<li style="width: 25%"><a href="/Announcement">Announcement</a></li>
+					<li style="width: 20%"><a href="/Announcement">Announcement</a></li>
 		        
-					<li style="width: 25%"><a href="/Tasks_DT/">Tasks_DT</a></li>
+					<li style="width: 20%"><a href="/Tasks_KMeans">Tasks_KMeans</a></li>
 		        
-					<li style="width: 25%"><a href="/Tasks_SQL/">Tasks_SQL</a></li>
+					<li style="width: 20%"><a href="/Tasks_DT/">Tasks_DT</a></li>
+		        
+					<li style="width: 20%"><a href="/Tasks_SQL/">Tasks_SQL</a></li>
 		        
 				</ul>
 			</nav>
@@ -181,6 +187,354 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Tasks_DT" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Tasks_DT/">Tasks——DT</a>
+    </h1>
+  
+
+        
+        <a href="/Tasks_DT/" class="archive-article-date">
+  	<time datetime="2019-01-14T02:19:49.204Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h1 id="写在前面的"><a href="#写在前面的" class="headerlink" title="写在前面的"></a>写在前面的</h1><ul>
+<li><strong>学英语、算法以及代码都是一个缓慢的过程。如果任何时候你感觉时间不够，节奏不对，或者身体不适，虎躯一震，我们可以放慢脚步。但是请千万不要糊弄，耽误大家的时间和精力</strong><ul>
+<li>10个小时的活只有好好干10个小时才能获得10分收获</li>
+<li>10个小时的活急急忙忙干3个小时，保证转天就忘</li>
+<li>做强逻辑性的活儿千万不要死背，死记任何东西。尽量去理解，去梳理逻辑，自然而然就记住了。我们最后的目的不是点亮技能说我会多少多少种模型算法，而是遇到一个实际问题你能想到几个可能可以用的模型，并且知道其基本逻辑以及应该去哪里找相关的文献</li>
+</ul>
+</li>
+<li><strong>如果需要帮助在下能帮得上的肯定知无不言，千万不要羞涩</strong></li>
+<li><strong>如果有任何typo，语法错误请不吝赐教，我会尽快更正 ：）</strong></li>
+</ul>
+<p><br></p>
+<h1 id="Task-0-Setting-up-your-coding-environment"><a href="#Task-0-Setting-up-your-coding-environment" class="headerlink" title="Task 0: Setting up your coding environment"></a>Task 0: Setting up your coding environment</h1><p>If you haven’t already done so, please refer to <a href="https://askwitionary.github.io/python_environment/">this post</a>. And check if you have done the same. Make sure you have a separate new environment each time you develop a project</p>
+<h1 id="Task-1-Basic-data-cleanup"><a href="#Task-1-Basic-data-cleanup" class="headerlink" title="Task 1: Basic data cleanup"></a>Task 1: Basic data cleanup</h1><p>Dec. 11th 2018</p>
+<p>那我们就直接上手吧~这有个<a href="https://askwitionary.github.io/Getting-to-know-UCI-database-and-other-popular-on-line-database/">网上开放数据库</a>的介绍。你们可以去看看，然后就用里面提到的那个数据库，下载下来，写一个方法。</p>
+<h2 id="Making-data-machine-readable"><a href="#Making-data-machine-readable" class="headerlink" title="Making data machine readable"></a>Making data machine readable</h2><ul>
+<li><p>Input: crx.data file</p>
+</li>
+<li><p>Output: A <strong>2-D list</strong></p>
+<ul>
+<li><p>It should look like </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>output</span><br><span class="line">[[data_0], [data_1], [data_2], ...]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Individual data example</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>data_[<span class="number">0</span>]</span><br><span class="line">[<span class="string">'b'</span>, <span class="number">30.83</span>, <span class="number">0</span>, <span class="string">'u'</span>, <span class="string">'g'</span>, <span class="string">'w'</span>, <span class="string">'v'</span>, <span class="number">1.25</span>, <span class="string">'t'</span>, <span class="string">'t'</span>, <span class="string">'01'</span>, <span class="string">'f'</span>, <span class="string">'g'</span>, <span class="string">'00202'</span>, <span class="number">0</span>, <span class="string">'+'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Mind the data types. Do not make all of them string. </p>
+</li>
+<li><p>For now we will use pure python. We will try to improve our code when we are handling larger scale of data.</p>
+</li>
+</ul>
+<h2 id="Skim-through-other-datasets"><a href="#Skim-through-other-datasets" class="headerlink" title="Skim through other datasets"></a>Skim through other datasets</h2><p>The task above should be relatively simple. If you should have more time, you can go deeper into the dataset website. Try to look for interesting data and compare differences of datasets that are by default used for different purposes, i.e., regression, classification and so on. </p>
+<p>多看看别的数据，比较一下常用于分类、回归等问题的数据有什么样的区别。</p>
+<h1 id="Task-2-Implementing-helper-functions"><a href="#Task-2-Implementing-helper-functions" class="headerlink" title="Task 2: Implementing helper functions"></a>Task 2: Implementing helper functions</h1><p>Dec. 18th 2018</p>
+<h2 id="Before-you-do-anything"><a href="#Before-you-do-anything" class="headerlink" title="Before you do anything"></a>Before you do anything</h2><p>It is important for you to at least have a rough idea of what kind of data you are dealing with. For instance, if you have read through all the files in the data folder and the description on the website, you should at least know that: </p>
+<ul>
+<li>This dataset consists of 690 credit card applicants’ personal information and whether or not they are approved for the credit card. </li>
+<li>Each data entry has 15 attributes, and data types of each attribute are on the website<ul>
+<li>we see that A2, A3, A8, A11, A14, A15 are continuous (number)</li>
+<li>All others are categorical (choices)</li>
+</ul>
+</li>
+<li>37 cases (5%) have one or more missing values</li>
+<li>This dataset has 2 classes, positive and negative, meaning approved and declined</li>
+</ul>
+<p>If you haven’t already read through all these information, <strong>go back and try to capture and understand your dataset first</strong></p>
+<p>Here is the link: </p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https://archive.ics.uci.edu/ml/datasets/Credit+Approval</span></span><br></pre></td></tr></table></figure>
+<h2 id="Back-to-the-point"><a href="#Back-to-the-point" class="headerlink" title="Back to  the point"></a>Back to  the point</h2><h3 id="Where-we-are"><a href="#Where-we-are" class="headerlink" title="Where we are"></a>Where we are</h3><ul>
+<li><p>We now know one mathematical model: <strong>decision tree (DT)</strong></p>
+<ul>
+<li>DT is a <strong>supervised</strong> learning method, thus we need labeled data</li>
+<li>It is one process only thus it is not good for giant datasets</li>
+<li>It is pretty good on small and clean datasets</li>
+</ul>
+</li>
+<li><p>We have a cleaned dataset: UCI credit approval data set</p>
+<ul>
+<li>690 data entries, relatively small dataset</li>
+<li>15 attributes, pretty tiny to be honest</li>
+<li>missing value is only 5%</li>
+<li>2 class data</li>
+</ul>
+</li>
+<li>By looking at these two, we know DT should work well for our dataset</li>
+</ul>
+<h3 id="What-I-will-provide"><a href="#What-I-will-provide" class="headerlink" title="What I will provide"></a>What I will provide</h3><ul>
+<li>I will provide a skeleton project this time, with detailed docstring stating what your input and output should be</li>
+<li>I will also provide a printer function to print your tree at the end</li>
+</ul>
+<h3 id="What-you-need-to-do"><a href="#What-you-need-to-do" class="headerlink" title="What you need to do"></a>What you need to do</h3><ul>
+<li><p><strong>Comment on lines in any one of the following circumstances:</strong></p>
+<ul>
+<li><strong>It took you more than 3 minutes to think</strong></li>
+<li><strong>You have to seek help on the Internet or from somebody else</strong></li>
+<li><strong>You are feeling brilliant</strong></li>
+<li><strong>You’ve got a bug that is not caused by a typo</strong></li>
+</ul>
+</li>
+<li><p><strong>在下列情景下请务必动动小手，写好注释。注释请麻烦高亮显示，救救孩子们的眼睛吧！</strong></p>
+<ul>
+<li><strong>某一步骤花费了你超过3分钟去思考</strong></li>
+<li><strong>你不得不找度娘和谷哥寻求帮助</strong></li>
+<li><strong>你感觉你写了几行吊炸天的代码，简直聪明至极</strong></li>
+<li><strong>测试的时候出现了bug，而且不是因为你不小心打错了这种原因</strong></li>
+</ul>
+</li>
+<li><p>I assume you have already finished your Task 1</p>
+<ul>
+<li>Copy and paste your code to function <code>readfile(file_name)</code> under the comment <code># Your code here</code>. </li>
+<li>Make sure your input and output matches how I descirbed in the docstring</li>
+<li>Make a minor improvement to handle missing data, in this case let’s use string <code>&quot;missing&quot;</code> to represent missing data. Note that it is given as <code>&quot;?&quot;</code></li>
+</ul>
+</li>
+<li><p>Implement <code>is_missing(value)</code>,  <code>class_counts(rows)</code>,  <code>is_numeric(value)</code> as directed in the docstring</p>
+</li>
+<li><p>Implement class <code>Determine</code>. This object represents a <strong>node</strong> of our DT. 这个对象表示的是决策树的节点。</p>
+<ul>
+<li>It has 2 inputs and a function. 有两个输入，一个方法</li>
+<li>We can think of it as the <strong>Question</strong> we are asking at each node. 可以理解成决策树中每个节点我们所提出的“问题”</li>
+<li>Recall the questions we asked in the play/not play dataset<ul>
+<li>Is it Sunny, overcast, or rainy?</li>
+<li>Is it hot, mild or cold?</li>
+<li>Is the wind strong or weak?</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>为了更好地解释，我们参照下面这一组数据</li>
+</ul>
+<p>| name | gender | age  | internet | income | label |<br>| :–: | :—-: | :–: | :——: | :—-: | :—: |<br>| 大壮 |   M    |  34  |   1.3    |  23k   |   -   |<br>| 二花 |   F    |  28  |   2.6    |  17k   |   +   |<br>| 三胖 |   M    |  22  |   6.7    |   7k   |   +   |<br>| 四妞 |   F    |  17  |   5.9    |   1k   |   -   |</p>
+<ul>
+<li><p>这是随便编的一个网络营销广告效果的数据，我们有四个用户，两男两女，以及他们的年龄，每天上网时间，收入以及是否购买了我们营销的产品</p>
+</li>
+<li><p>For each possible column and value, we can have:</p>
+<ul>
+<li><p>Column: 3, Value: 4 means we are looking at column 3 and the threshhold value is 4. </p>
+</li>
+<li><p>If now we run the <code>match(self, example)</code> method, such as:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj = Determine(<span class="number">3</span>, <span class="number">4</span>)	<span class="comment"># Question is about column 3 and the threshold is 4</span></span><br><span class="line">row = [<span class="string">"三胖"</span>, <span class="string">"M"</span>, <span class="number">22</span>, <span class="number">6.7</span>, <span class="string">"7k"</span>, <span class="string">"+"</span>]</span><br><span class="line">obj.match(row)			<span class="comment"># Is row[3] greater than the threshold?</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>If the question is categorical, such as:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj = Determine(<span class="number">1</span>, <span class="string">'F'</span>)	<span class="comment"># Question is about column 1 and the threshold is 'F'</span></span><br><span class="line">row = [<span class="string">"三胖"</span>, <span class="string">"M"</span>, <span class="number">22</span>, <span class="number">6.7</span>, <span class="string">"7k"</span>, <span class="string">"+"</span>]</span><br><span class="line">obj.match(row)			<span class="comment"># Is row[1] same as the threshold?</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>__init__</code> is already given</p>
+</li>
+<li><p>Please implement the method <code>match</code></p>
+<ul>
+<li>Be careful for missing data</li>
+<li>Make sure to check input data type. It should be at least 2 cases (numeric and categorical/string)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Implement the method <code>partition(rows, question)</code>as described in the docstring</p>
+<ul>
+<li>Use Determine class to partition data into 2 groups</li>
+</ul>
+</li>
+<li><p>Implement the method <code>gini(rows)</code> as described in the docstring</p>
+<ul>
+<li>Here is the formula for Gini impurity: <a href="https://www.codecogs.com/eqnedit.php?latex=\mathit{Gini}&space;=&space;1&space;-&space;\sum_{i=1}^{n}p_i^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathit{Gini}&space;=&space;1&space;-&space;\sum_{i=1}^{n}p_i^2" title="\mathit{Gini} = 1 - \sum_{i=1}^{n}p_i^2"></a><ul>
+<li>where <code>n</code> is the number of classes</li>
+<li><a href="https://www.codecogs.com/eqnedit.php?latex=p_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_i" title="p_i"></a> is the percentage of the given class <code>i</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Implement the method <code>info_gain(left, right, current_uncertainty)</code> as described in the docstring</p>
+<ul>
+<li>Here is the formula for Information Gain: <a href="https://www.codecogs.com/eqnedit.php?latex=IG&space;=&space;U_0&space;-&space;p_l&space;\cdot&space;G_l&space;-&space;p_r&space;\cdot&space;G_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?IG&space;=&space;U_0&space;-&space;p_l&space;\cdot&space;G_l&space;-&space;p_r&space;\cdot&space;G_r" title="IG = U_0 - p_l \cdot G_l - p_r \cdot G_r"></a> <ul>
+<li>where <a href="https://www.codecogs.com/eqnedit.php?latex=p_r&space;=&space;1-p_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_r&space;=&space;1-p_l" title="p_r = 1-p_l"></a> </li>
+<li><a href="https://www.codecogs.com/eqnedit.php?latex=U_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?U_0" title="U_0"></a> is current_uncertainty</li>
+<li><a href="https://www.codecogs.com/eqnedit.php?latex=p_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_l" title="p_l"></a> is the percentage/probability of left branch, same story for <a href="https://www.codecogs.com/eqnedit.php?latex=p_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_r" title="p_r"></a> </li>
+<li><a href="https://www.codecogs.com/eqnedit.php?latex=G_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_l" title="G_l"></a> is the Gini impurity we mentioned above for the left branch. Same story for <a href="https://www.codecogs.com/eqnedit.php?latex=G_r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_r" title="G_r"></a> </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Happy-Coding"><a href="#Happy-Coding" class="headerlink" title="Happy Coding :)"></a>Happy Coding :)</h3><h1 id="Task-3"><a href="#Task-3" class="headerlink" title="Task 3"></a>Task 3</h1><p>Dec. 24th 2018    Merry Christmas</p>
+<ul>
+<li>Implement <code>find_best_split(rows)</code>. This is the core of our DT algorithm. We need to find the best “question” to be asked. Please follow the steps below and comment on all the lines you feel necessary. <ul>
+<li>Initialize all variables. You may need to store the best information gain, the best Determine object and more</li>
+<li>Loop through all the columns</li>
+<li>Find all possible values of each column. Note that we do <strong>NOT</strong> want duplicate values here</li>
+<li>Loop through each value you have found in the previous step</li>
+<li>Define a new <code>Determine</code> object with the current column and value</li>
+<li>Find and store <code>true_rows</code> and <code>false_rows</code> with <code>partition</code> function</li>
+<li>Examine if your rows got any split. i.e. if any of the <code>true_rows</code> and <code>false_rows</code> has length 0. <ul>
+<li>If yes, do nothing and continue executing your loop</li>
+<li>If not, calculate information gain with the method you have implemented in Task 2</li>
+</ul>
+</li>
+<li>Check if the value you’ve got is better</li>
+<li>After all the loop, return the best information gain and the best Determine object associated with the best information gain</li>
+</ul>
+</li>
+<li>Implement the class <code>Leaf</code><ul>
+<li>This object represents a decision node when it has reached to a leaf node</li>
+<li>You either cannot split any more, or the prediction is already certain (100%)</li>
+<li>Implement <code>__init__(self, rows)</code>. You just need to tell us what <code>self.prediction</code> is</li>
+<li>Our prediction now is simply based on which labels lie in this leaf and how many data entries for each label are there in this leaf. Say we have 3 data entries all fall into this leaf, as follows,<ul>
+<li>data_0: bla bla bla +</li>
+<li>data_1: bla bla bla -</li>
+<li>data_2: bla bla bla +</li>
+</ul>
+</li>
+<li>Then whenever we have a testing data that falls into this leaf, we know that there is approximately 66.67% chance it is a “+” and 33.33% chance it is a “-“</li>
+<li>Recall that we have implemented a function called <code>class_counts(rows)</code> which might be useful</li>
+</ul>
+</li>
+<li>Implement the class <code>DecisionNode</code><ul>
+<li><code>DecisionNode</code> has 3 inputs</li>
+<li>We will need to compare different <code>DecisionNode</code> objects. We define a method <code>__eq__()</code> to allow <code>==</code> to be used<ul>
+<li>We compare if all three attributes of <code>self</code> and <code>other</code> are the same and return a <strong>boolean</strong>(True/False)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Implement the function <code>build_tree(rows)</code>. This is the function we use to actually build our tree. Please follow the steps below,<ul>
+<li>We will be using recursive function here (递归函数)</li>
+<li>Find the best split using the method we implemented before, store information gain and the question to a local variable</li>
+<li>Define the ending condition. If there is no gain, i.e. <code>gain == 0</code>, return a leaf node <code>Leaf(rows)</code></li>
+<li>Otherwise, get the partition of the tree at the current node with the best question(<code>Determine</code> object that we got before)</li>
+<li>We use <strong>DFS(Depth First Search)</strong> to build the tree, and do the true_branch <strong>recursively</strong> first.</li>
+<li>We then split the false_branch <strong>recursively</strong></li>
+<li>At last, we need to return something. We will return a <code>DecisionNode</code> object here since the starting point is also a <code>DecisionNode</code></li>
+<li>Notes:<ul>
+<li>This function might take you some time and thinking. Be patient</li>
+<li>You need to understand the logic behind our DT before you even start to think. Talk to me if you are not feeling confident enough</li>
+<li>Look up <strong>recursive function</strong> and <strong>depth first search</strong> if necessary. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>I will implement <code>print_tree</code>. You don’t need to worry about it at all</li>
+<li><p>Implement the method <code>classify(row, node)</code>. This is the method we use to predict our testing/validation/real dataset. Follow the steps below</p>
+<ul>
+<li>First define ending scenario. If we have reached a <code>leaf node</code>, return the <code>prediction</code></li>
+<li>If input is not a leaf node, then it should be a <code>DecisionNode</code>. </li>
+<li>Use the <code>match</code> function we defined before to determine whether it will be classified to the true_branch or the false_branch</li>
+<li>recursively return <code>classify(row, node.&lt;branch&gt;)</code> while if the previous step gives you a <code>True</code>, you use the true_branch for <code>&lt;branch&gt;</code> ; and if the previous step gives you a <code>False</code>, you use the false_branch for <code>&lt;branch&gt;</code> </li>
+</ul>
+</li>
+<li><p>I will provide all the code you need for <code>print_leaf(counts)</code></p>
+</li>
+<li>Happy coding!</li>
+</ul>
+<h1 id="Task-4"><a href="#Task-4" class="headerlink" title="Task 4"></a>Task 4</h1><p>Dec. 31st 2018    Happy New Year!</p>
+<p>Now we have all the tools we need for our decision tree. It’s time for us to use it to do some magic!</p>
+<h2 id="Data-Splitting"><a href="#Data-Splitting" class="headerlink" title="Data Splitting"></a>Data Splitting</h2><ul>
+<li>We first split our data into 2 sets, training set and testing set</li>
+<li>You can first just use the first 85% of data as training data and the remaining as testing data</li>
+<li>You will need to try to make them random selected</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fraction = <span class="number">0.15</span>					<span class="comment"># 15% of data will be used as testing set</span></span><br><span class="line">data = 							<span class="comment"># Please complete this line to read data from file</span></span><br><span class="line">training_data = 				<span class="comment"># Please complete this line to extract training set</span></span><br><span class="line">testing_data = 					<span class="comment"># Please complete this line to extract testing set</span></span><br></pre></td></tr></table></figure>
+<h2 id="Making-our-tree-readable"><a href="#Making-our-tree-readable" class="headerlink" title="Making our tree readable"></a>Making our tree readable</h2><ul>
+<li>Now we define column labels. Note that this is only used for printing your tree</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Column labels.</span></span><br><span class="line"><span class="comment"># These are used only to print the tree.</span></span><br><span class="line">header = []</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(len(testing_data[<span class="number">0</span>])):</span><br><span class="line">	header.append(<span class="string">'Attribute&#123;&#125;'</span>.format(_))</span><br></pre></td></tr></table></figure>
+<h2 id="Building-our-tree"><a href="#Building-our-tree" class="headerlink" title="Building our tree"></a>Building our tree</h2><ul>
+<li>OK, we are good to build our tree using our training data</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my_very_first_decision_tree = 	<span class="comment"># Please complete this line to build your tree</span></span><br></pre></td></tr></table></figure>
+<h2 id="Calculating-accuracy-of-our-tree-with-testing-data"><a href="#Calculating-accuracy-of-our-tree-with-testing-data" class="headerlink" title="Calculating accuracy of our tree with testing data"></a>Calculating accuracy of our tree with testing data</h2><ul>
+<li>Now we have our tree ready. It’s time to test how our tree works</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">corr = <span class="number">0</span>						<span class="comment"># Used to store how many correct prediction we will get</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> testing_data:		<span class="comment"># Loop through all testing data</span></span><br><span class="line">    actual = 					<span class="comment"># Store the actual label, which should be the last column</span></span><br><span class="line">    <span class="comment"># Get all possibilities predicted by our tree with the given testing data</span></span><br><span class="line">    possibilities = print_leaf(classify(row, my_very_first_decision_tree))</span><br><span class="line">    <span class="comment"># You can print out the possibilities and see what they look like</span></span><br><span class="line">    <span class="comment"># Now loop through all possibilities and get the prediction with the highest possibility</span></span><br><span class="line">    <span class="keyword">for</span> case <span class="keyword">in</span> possibilities:</span><br><span class="line">        <span class="comment"># Your code here</span></span><br><span class="line">        predictioin = <span class="keyword">None</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="comment"># Now test if our prediction is the same as the actual output</span></span><br><span class="line">    <span class="keyword">if</span>  ==	:					<span class="comment"># Please complete this line</span></span><br><span class="line">    	<span class="comment"># Your code here</span></span><br><span class="line">        <span class="keyword">pass</span>					<span class="comment"># If our prediction is correct, add 1 to corr</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># Print out the wrong predictions</span></span><br><span class="line">        <span class="comment"># Replace the Nones with correct variables</span></span><br><span class="line">        <span class="comment"># We need the actual label, predicted label, and the probability of the prediction, in that order</span></span><br><span class="line">        print(<span class="string">"Actual: &#123;&#125; === Predicted: &#123;&#125; === Prob: &#123;&#125;"</span>,format(<span class="keyword">None</span>, <span class="keyword">None</span>, <span class="keyword">None</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="Overall-accuracy"><a href="#Overall-accuracy" class="headerlink" title="Overall accuracy"></a>Overall accuracy</h2><ul>
+<li>Finally, we need to see the overall accuracy of our model</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Replace the None with calculated overall accuracy</span></span><br><span class="line">print(<span class="string">"Overall Accuracy: &#123;&#125;%"</span>.format(<span class="keyword">None</span>))</span><br></pre></td></tr></table></figure>
+<h1 id="Task-5"><a href="#Task-5" class="headerlink" title="Task 5"></a>Task 5</h1><h2 id="Reflections-and-future-work"><a href="#Reflections-and-future-work" class="headerlink" title="Reflections and future work"></a>Reflections and future work</h2><ul>
+<li>How did it go? How is your model accuracy?</li>
+<li>运行得怎么样？（耗时、内存/CPU使用）最后模型的准确率怎么样？</li>
+<li>Try using random selected testing data and training data. Do you see significant difference in accuracy?</li>
+<li>试试用<strong>随机抽取的</strong>85%的数据做训练，剩下的15%的数据做测试，看看模型准确率有没有明显变化？</li>
+<li>Try to use at least 2 other datasets from UCI database to see how decision tree works for them. Do you see any similarities in the datasets that perform well?</li>
+<li>尝试从UCI数据库中选择至少两个别的数据，并用决策树对其训练并分析效率与准确率。你能总结出什么？决策树效果好的数据有什么特点？</li>
+<li>Try to implement the very basic random forest using our decision tree model as the baseline model</li>
+<li>调用我们的决策树模型，尝试开发一个最基本的随机森林模型，</li>
+<li>Future reading and presentation: </li>
+<li>延展阅读学习以及<strong>演讲</strong><ul>
+<li>Takeaways from this project</li>
+<li>这个项目中学到了什么</li>
+<li>Issues of decision tree</li>
+<li>决策树的问题</li>
+<li>Possible techniques to resolve these issues</li>
+<li>可能的解决办法</li>
+<li>What kind of problems are best suited for decision trees?</li>
+<li>什么样的问题最适合决策树</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
+<li><p>Developers, G. (2017, September 13). Let’s Write a Decision Tree Classifier from Scratch - Machine Learning Recipes #8. Retrieved from <a href="https://www.youtube.com/watch?v=LDRbO9a6XPU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=LDRbO9a6XPU</a></p>
+</li>
+<li><p>Chiharu, S. (1992, March 19). [Japanese Credit Screening (examples &amp; domain theory)]. Published raw data.</p>
+</li>
+<li></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/Tasks_DT/">Show All >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-spacy" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
