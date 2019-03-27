@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="A Simple Tech Blog">
 <meta property="og:description" content="Task 1Read and understand our dataset Once again we need to have some basic ideas about what we are dealing with Try to understand your dataset by checking the following Is it a labeled dataset or not">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T06:50:04.023Z">
+<meta property="og:updated_time" content="2019-03-27T09:41:23.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tasks-KMeans">
 <meta name="twitter:description" content="Task 1Read and understand our dataset Once again we need to have some basic ideas about what we are dealing with Try to understand your dataset by checking the following Is it a labeled dataset or not">
@@ -240,8 +240,43 @@ var _hmt = _hmt || [];
 <li>Yes, we will get our hands dirty to do some preprocessing this time. Hoorays!</li>
 </ul>
 <h2 id="Normalization"><a href="#Normalization" class="headerlink" title="Normalization"></a>Normalization</h2><ul>
-<li>Normalizing data is a broad field of study in statistics. Different methods of normalization for different datasets can have significant impact on </li>
+<li><p>Normalizing data is a broad field of study in statistics. Different methods of normalization for different datasets can have significant impact on how your model performs</p>
+</li>
+<li><p>For now we will start with a very simple method for normalization, calculating percentile</p>
+</li>
+<li><p>Calculate and replace <strong>all numeric</strong> data to its percentile</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">percentile = data / column_max</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<h2 id="Initialize-KMeans-object"><a href="#Initialize-KMeans-object" class="headerlink" title="Initialize KMeans object"></a>Initialize <code>KMeans</code> object</h2><ul>
+<li>Before you do anything, read through all functions in <code>KMeans</code> object and try to understand the logic of this object</li>
+<li>Understand all parameters and when/how the parameters are used</li>
+<li>The explanation of each parameter should be clear enough in the skeleton file</li>
+</ul>
+<h2 id="Helper-functions-to-calculate-distances"><a href="#Helper-functions-to-calculate-distances" class="headerlink" title="Helper functions to calculate distances"></a>Helper functions to calculate distances</h2><p>We implement 2 most common distance calculator here</p>
+<ul>
+<li>Euclidean Distance<ul>
+<li>Please refer to the Baidu Baike page for <a href="https://baike.baidu.com/item/欧几里得度量/1274107" target="_blank" rel="noopener">欧几里得度量</a></li>
+<li>It’s not fancy at all. I am deadly sure you are pretty familiar with it</li>
+</ul>
+</li>
+<li>Manhattan Distance<ul>
+<li>Please refer to the Baidu Baike page for <a href="https://baike.baidu.com/item/曼哈顿距离/743092" target="_blank" rel="noopener">曼哈顿距离</a></li>
+<li>You might not be as familiar with Manhattan distance as Euclidean distance but trust me it is even simpler</li>
+</ul>
+</li>
+<li>You will be calling this function tons of times so make sure to pay attention to run time efficiency</li>
+</ul>
+<h1 id="Task3"><a href="#Task3" class="headerlink" title="Task3"></a>Task3</h1><h2 id="Implement-group-function"><a href="#Implement-group-function" class="headerlink" title="Implement group() function"></a>Implement <code>group()</code> function</h2><ol>
+<li>Store current clusters into <code>self.previous</code></li>
+<li>Re-initialize <code>self.clusters</code></li>
+<li>Loop through all data points and group it to its <strong>nearest</strong> cluster<ol>
+<li>Note that each cluster is identified by its center</li>
+<li>You need to pay close attention to the relationship between each cluster and its center as well as data points that are supposed to be grouped into that cluster</li>
+</ol>
+</li>
+<li>Update the centers of each cluster</li>
+</ol>
 
       
 
@@ -374,7 +409,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Task-1"><span class="toc-number">1.</span> <span class="toc-text">Task 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Read-and-understand-our-dataset"><span class="toc-number">1.1.</span> <span class="toc-text">Read and understand our dataset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prepare-your-dataset"><span class="toc-number">1.2.</span> <span class="toc-text">Prepare your dataset</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task2"><span class="toc-number">2.</span> <span class="toc-text">Task2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Preprocessing"><span class="toc-number">2.1.</span> <span class="toc-text">Preprocessing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Normalization"><span class="toc-number">2.2.</span> <span class="toc-text">Normalization</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Task-1"><span class="toc-number">1.</span> <span class="toc-text">Task 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Read-and-understand-our-dataset"><span class="toc-number">1.1.</span> <span class="toc-text">Read and understand our dataset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prepare-your-dataset"><span class="toc-number">1.2.</span> <span class="toc-text">Prepare your dataset</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task2"><span class="toc-number">2.</span> <span class="toc-text">Task2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Preprocessing"><span class="toc-number">2.1.</span> <span class="toc-text">Preprocessing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Normalization"><span class="toc-number">2.2.</span> <span class="toc-text">Normalization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Initialize-KMeans-object"><span class="toc-number">2.3.</span> <span class="toc-text">Initialize KMeans object</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Helper-functions-to-calculate-distances"><span class="toc-number">2.4.</span> <span class="toc-text">Helper functions to calculate distances</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task3"><span class="toc-number">3.</span> <span class="toc-text">Task3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Implement-group-function"><span class="toc-number">3.1.</span> <span class="toc-text">Implement group() function</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
