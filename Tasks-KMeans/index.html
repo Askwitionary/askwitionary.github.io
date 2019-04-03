@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="A Simple Tech Blog">
 <meta property="og:description" content="Task 1Read and understand our dataset Once again we need to have some basic ideas about what we are dealing with Try to understand your dataset by checking the following Is it a labeled dataset or not">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T09:52:17.610Z">
+<meta property="og:updated_time" content="2019-04-03T07:14:26.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tasks_KMeans">
 <meta name="twitter:description" content="Task 1Read and understand our dataset Once again we need to have some basic ideas about what we are dealing with Try to understand your dataset by checking the following Is it a labeled dataset or not">
@@ -277,7 +277,19 @@ var _hmt = _hmt || [];
 </li>
 <li>Update the centers of each cluster by taking the <strong>center of mass</strong> of that chunk of data</li>
 </ol>
-<h2 id="Implement-cluster-function"><a href="#Implement-cluster-function" class="headerlink" title="Implement cluster() function"></a>Implement <code>cluster()</code> function</h2><h1 id="Task4"><a href="#Task4" class="headerlink" title="Task4"></a>Task4</h1><h2 id="Implement-your-testing-code-and-reasonable-test-case"><a href="#Implement-your-testing-code-and-reasonable-test-case" class="headerlink" title="Implement your testing code and reasonable test case"></a>Implement your testing code and reasonable test case</h2>
+<h2 id="Implement-cluster-function"><a href="#Implement-cluster-function" class="headerlink" title="Implement cluster() function"></a>Implement <code>cluster()</code> function</h2><ol>
+<li>Update Object parameters for <code>k</code>, <code>max_iter</code> and <code>max_time</code></li>
+<li>Initiate <code>current_iter</code> and <code>init_time</code> to keep track of the iteration and time</li>
+<li>Initiate centers if centers are not given</li>
+<li>这里开始写一个<strong>死循环</strong><ol>
+<li>Update current time</li>
+<li>If maximum iteration or maximum time elapsed has reached, break the loop</li>
+<li>Group all points</li>
+<li>If the new cluster is the same as the previous step, break the loop</li>
+</ol>
+</li>
+</ol>
+<h1 id="Task4"><a href="#Task4" class="headerlink" title="Task4"></a>Task4</h1><h2 id="Implement-your-testing-code-and-reasonable-test-case"><a href="#Implement-your-testing-code-and-reasonable-test-case" class="headerlink" title="Implement your testing code and reasonable test case"></a>Implement your testing code and reasonable test case</h2>
       
 
       
